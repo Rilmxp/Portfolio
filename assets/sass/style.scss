@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+  font-size: 1.5em;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+}
+
+/*To be removed, white space generator */
+.white-space {
+  height: 500px;
+}
+
+.main-menu {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  padding: 5px 5px;
+  justify-content: center;
+
+  li {
+    display: inline;
+    margin-right: 25px;
+
+    &:last-of-type {
+      margin-right: 0px;
+    }
+
+    a {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: white;
+      }
+
+      &:hover {
+        color: green;
+      }
+    }
+  }
+}

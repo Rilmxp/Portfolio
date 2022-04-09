@@ -1,3 +1,49 @@
-h1 {
-  color: blue;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+  font-size: 1.5em;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+}
+
+/*To be removed, white space generator */
+.white-space {
+  height: 500px;
+}
+
+.main-menu {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 5px 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-menu li {
+  display: inline;
+  margin-right: 25px;
+}
+
+.main-menu li:last-of-type {
+  margin-right: 0px;
+}
+
+.main-menu li a:link, .main-menu li a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.main-menu li a:hover {
+  color: green;
 }
