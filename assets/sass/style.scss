@@ -27,10 +27,10 @@ body {
   width: 100%;
   height: 40px;
   padding: 5px 5px;
-  border-bottom: 3px solid #fef200;
+  border-bottom: 3px solid $color-yellow;
 
   .logo {
-    color: $color-main;
+    color: $color-green;
     text-decoration: none;
     margin-left: 5px;
   }
@@ -51,7 +51,8 @@ body {
       }
 
       &:hover {
-        color: $color-main;
+        color: $color-green;
+        font-size: 1.15em;
       }
     }
   }

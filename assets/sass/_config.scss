@@ -1,1 +1,16 @@
-$color-main: #00ff2a;
+/*576px for portrait phones.
+768px for tablets.
+992px for laptops.
+1200px for large devices. */
+
+$color-green: #00ff2a;
+$color-yellow: #fef200;
+
+@keyframes hover-animation {
+  from {
+    font-size: inherit;
+  }
+  to {
+    font-size: 1.1em;
+  }
+}
