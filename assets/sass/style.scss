@@ -1,3 +1,5 @@
+@import "config";
+
 * {
   margin: 0;
   padding: 0;
@@ -20,16 +22,25 @@ body {
 .main-menu {
   position: fixed;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
+  height: 40px;
   padding: 5px 5px;
-  justify-content: center;
+  border-bottom: 3px solid #fef200;
 
-  li {
+  .logo {
+    color: $color-main;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+
+  ul li {
     display: inline;
     margin-right: 25px;
 
     &:last-of-type {
-      margin-right: 0px;
+      margin-right: 5px;
     }
 
     a {
@@ -40,7 +51,7 @@ body {
       }
 
       &:hover {
-        color: green;
+        color: $color-main;
       }
     }
   }
