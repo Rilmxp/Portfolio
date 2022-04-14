@@ -6,11 +6,11 @@
 $color-green: #00ff2a;
 $color-yellow: #fef200;
 
-@keyframes hover-animation {
-  from {
-    font-size: inherit;
-  }
-  to {
-    font-size: 1.1em;
-  }
-}
+// @media only screen and (max-width: 700px) {
+//   .logo {
+//     color: red !important;
+//   }
+//   .menu ul li {
+//     display: block !important;
+//   }
+// }
