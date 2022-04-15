@@ -35,11 +35,16 @@ nav ul {
       -ms-flex-direction: column;
           flex-direction: column;
   list-style-type: none;
+  padding: 10px;
 }
 
 nav ul .logo {
   font-size: 1.7em;
-  color: #fef200;
+  color: #00ff2a;
+}
+
+nav ul .btn-toggle:hover {
+  color: #00ff2a;
 }
 
 nav ul .logo-toggle {
@@ -64,12 +69,12 @@ nav ul .page-links {
           align-items: center;
 }
 
-nav ul li {
-  font-size: 1.5em;
+nav ul .show-hide {
+  display: none;
 }
 
-nav ul li .show-hide {
-  display: none;
+nav ul li {
+  font-size: 1.5em;
 }
 
 nav ul li a:link, nav ul li a:visited {
@@ -90,12 +95,6 @@ nav ul li a:hover {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-  }
-  nav ul .logo {
-    color: red !important;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
   }
   nav ul .page-links {
     -webkit-box-orient: horizontal;
