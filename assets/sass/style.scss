@@ -1,77 +1,46 @@
 @import "config";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Cabin", sans-serif;
-  // font-size: 1.5em;
-  color: white;
-  background-color: black;
-  font-weight: bold;
-}
-
 /*To be removed, white space generator */
 .white-space {
-  height: 500px;
+  margin-top: 100px;
+  height: 100px;
+  border: 3px dotted blue;
 }
 
-nav {
-  position: fixed;
-  width: 100%;
+@import "navbar";
 
-  ul {
+#about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // border: 3px solid white;
+
+  img {
+    border-bottom: 3px solid $color-yellow;
+    border-radius: 50%;
+  }
+  .inner-about-me {
     display: flex;
     flex-direction: column;
-    list-style-type: none;
-    padding: 10px;
+    align-items: center;
+    padding: 15px;
+    font-size: 1.2em;
 
-    .logo {
-      font-size: 1.7em;
-      color: $color-green;
-    }
+    h1 {
+      // padding: 10px;
+      font-size: 2em;
+      margin-bottom: 5px;
 
-    .btn-toggle:hover {
-      color: $color-green;
-    }
-
-    .logo-toggle {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .page-links {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .show-hide {
-      display: none;
-    }
-
-    li {
-      font-size: 1.5em;
-
-      a {
-        &:link,
-        &:visited {
-          text-decoration: none;
-          color: white;
-        }
-
-        &:hover {
-          color: $color-green;
-        }
+      &:hover {
+        color: $color-yellow;
+        text-decoration: underline;
+        text-decoration-color: $color-green;
       }
     }
   }
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 660px) {
   nav {
     ul {
       flex-direction: row;

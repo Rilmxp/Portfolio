@@ -1,0 +1,53 @@
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  border-bottom: 1px solid $color-green;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 10px;
+
+    .logo {
+      font-size: 1.7em;
+      color: $color-green;
+    }
+
+    .btn-toggle:hover {
+      color: $color-green;
+    }
+
+    .logo-toggle {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .page-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .show-hide {
+      display: none;
+    }
+
+    li {
+      font-size: 1.5em;
+
+      a {
+        &:link,
+        &:visited {
+          text-decoration: none;
+          color: white;
+        }
+
+        &:hover {
+          color: $color-green;
+        }
+      }
+    }
+  }
+}

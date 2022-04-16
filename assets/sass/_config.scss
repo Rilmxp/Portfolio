@@ -3,14 +3,24 @@
 992px for laptops.
 1200px for large devices. */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+  // font-size: 1.5em;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+}
+
+//create space under fixed navbar
+article {
+  padding-top: 70px;
+}
+
 $color-green: #00ff2a;
 $color-yellow: #fef200;
-
-// @media only screen and (max-width: 700px) {
-//   .logo {
-//     color: red !important;
-//   }
-//   .menu ul li {
-//     display: block !important;
-//   }
-// }

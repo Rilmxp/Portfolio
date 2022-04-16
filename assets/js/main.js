@@ -3,7 +3,7 @@ const toggleIcon = document.querySelector(".btn-toggle i");
 const navListItems = document.querySelectorAll(".page-links li a ");
 
 //// NAVBAR LOGIC ////
-
+/////////////////////
 let openMenu = false;
 
 // Toggle button navbar menu
@@ -18,7 +18,7 @@ toggleBtn.addEventListener("click", function () {
   }
 });
 
-const mediaObj = window.matchMedia("(min-width: 700px)");
+const mediaObj = window.matchMedia("(min-width: 660px)");
 
 // Show navbar items when init on wide screen
 if (mediaObj.matches) {
@@ -38,3 +38,4 @@ mediaObj.onchange = (e) => {
   }
 };
 // END NAVBAR LOGIC //
+/////////////////////

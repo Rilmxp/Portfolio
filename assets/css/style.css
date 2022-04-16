@@ -16,14 +16,22 @@ body {
   font-weight: bold;
 }
 
+article {
+  padding-top: 70px;
+}
+
 /*To be removed, white space generator */
 .white-space {
-  height: 500px;
+  margin-top: 100px;
+  height: 100px;
+  border: 3px dotted blue;
 }
 
 nav {
   position: fixed;
   width: 100%;
+  background-color: black;
+  border-bottom: 1px solid #00ff2a;
 }
 
 nav ul {
@@ -86,7 +94,52 @@ nav ul li a:hover {
   color: #00ff2a;
 }
 
-@media only screen and (min-width: 700px) {
+#about-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about-me img {
+  border-bottom: 3px solid #fef200;
+  border-radius: 50%;
+}
+
+#about-me .inner-about-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  font-size: 1.2em;
+}
+
+#about-me .inner-about-me h1 {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+#about-me .inner-about-me h1:hover {
+  color: #fef200;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #00ff2a;
+          text-decoration-color: #00ff2a;
+}
+
+@media only screen and (min-width: 660px) {
   nav ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
