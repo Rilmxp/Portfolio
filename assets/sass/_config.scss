@@ -3,6 +3,27 @@
 992px for laptops.
 1200px for large devices. */
 
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("/assets/fonts/SourceSansPro-Regular.otf.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("/assets/fonts/SourceSansPro-Bold.otf.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("/assets/fonts/SourceSansPro-Black.otf.woff") format("woff");
+  font-style: normal;
+  font-weight: 900;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,11 +31,10 @@
 }
 
 body {
-  font-family: "Cabin", sans-serif;
-  // font-size: 1.5em;
+  font-family: "Source Sans Pro", sans-serif;
+  // font-size: 1em;
   color: white;
   background-color: black;
-  font-weight: bold;
 }
 
 //create space under fixed navbar
@@ -22,5 +42,40 @@ article {
   padding-top: 70px;
 }
 
+section {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
 $color-green: #00ff2a;
 $color-yellow: #fef200;
+
+.section-heading {
+  font-weight: 900;
+  color: $color-yellow;
+  font-size: 2em;
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 5px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: $color-green;
+    width: 100%;
+
+    transform: scaleX(0);
+    transition: transform 300ms ease;
+  }
+
+  &:hover {
+    color: $color-yellow;
+
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}

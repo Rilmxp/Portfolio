@@ -1,14 +1,17 @@
 nav {
   position: fixed;
+  z-index: 1;
   width: 100%;
   background-color: black;
   border-bottom: 1px solid $color-green;
+  height: 3.5em;
 
   ul {
     display: flex;
     flex-direction: column;
     list-style-type: none;
     padding: 10px;
+    font-weight: bold;
 
     .logo {
       font-size: 1.7em;

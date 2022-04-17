@@ -18,7 +18,7 @@ toggleBtn.addEventListener("click", function () {
   }
 });
 
-const mediaObj = window.matchMedia("(min-width: 660px)");
+const mediaObj = window.matchMedia("(min-width: 670px)");
 
 // Show navbar items when init on wide screen
 if (mediaObj.matches) {

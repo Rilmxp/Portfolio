@@ -2,48 +2,98 @@
 768px for tablets.
 992px for laptops.
 1200px for large devices. */
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("/assets/fonts/SourceSansPro-Regular.otf.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("/assets/fonts/SourceSansPro-Bold.otf.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("/assets/fonts/SourceSansPro-Black.otf.woff") format("woff");
+  font-style: normal;
+  font-weight: 900;
+}
+
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Cabin", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: white;
   background-color: black;
-  font-weight: bold;
 }
 
 article {
   padding-top: 70px;
 }
 
+section {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.section-heading {
+  font-weight: 900;
+  color: #fef200;
+  font-size: 2em;
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  background-color: #00ff2a;
+  width: 100%;
+  transform: scaleX(0);
+  transition: transform 300ms ease;
+}
+
+.section-heading:hover {
+  color: #fef200;
+}
+
+.section-heading:hover::after {
+  transform: scaleX(1);
+}
+
 /*To be removed, white space generator */
 .white-space {
-  margin-top: 100px;
   height: 100px;
   border: 3px dotted blue;
 }
 
 nav {
   position: fixed;
+  z-index: 1;
   width: 100%;
   background-color: black;
   border-bottom: 1px solid #00ff2a;
+  height: 3.5em;
 }
 
 nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   list-style-type: none;
   padding: 10px;
+  font-weight: bold;
 }
 
 nav ul .logo {
@@ -56,25 +106,14 @@ nav ul .btn-toggle:hover {
 }
 
 nav ul .logo-toggle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 nav ul .page-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 nav ul .show-hide {
@@ -95,70 +134,49 @@ nav ul li a:hover {
 }
 
 #about-me {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 #about-me img {
-  border-bottom: 3px solid #fef200;
   border-radius: 50%;
+  filter: grayscale(90%);
+  border: 2px solid;
 }
 
 #about-me .inner-about-me {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   padding: 15px;
-  font-size: 1.2em;
 }
 
-#about-me .inner-about-me h1 {
-  font-size: 2em;
-  margin-bottom: 5px;
+#work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#about-me .inner-about-me h1:hover {
-  color: #fef200;
-  text-decoration: underline;
-  -webkit-text-decoration-color: #00ff2a;
-          text-decoration-color: #00ff2a;
-}
-
-@media only screen and (min-width: 660px) {
+@media only screen and (min-width: 670px) {
   nav ul {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
   }
   nav ul .page-links {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   nav ul .btn-toggle {
     display: none;
   }
   nav ul li {
     margin-right: 13px;
+  }
+  #about-me {
+    display: flex;
+    flex-direction: row;
+  }
+  #about-me h1 {
+    align-self: flex-start;
   }
 }
