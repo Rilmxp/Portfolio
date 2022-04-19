@@ -9,14 +9,87 @@
 
 @import "navbar";
 @import "about";
+@import "custom";
 
 // WHAT IO'VE DONE SECTION - WORK -
+
+// for debugging
+// #carouselExampleControls {
+//   border: white solid 3px;
+// }
 
 #work {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 300px;
+
+  img {
+    opacity: 0.5;
+    min-height: 360px;
+  }
+
+  ul {
+    list-style-type: none;
+    font-size: smaller;
+    padding-left: 0;
+  }
+
+  .alignment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  h5 {
+    font-weight: bold;
+    color: $color-yellow;
+    text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
+    margin-bottom: 1em;
+  }
+
+  h6 {
+    font-size: 19.2px;
+    font-weight: bolder;
+    margin-bottom: -3px;
+  }
+
+  p {
+    font-size: 16px;
+  }
 }
+
+// .hotel-experience {
+// .job-description {
+// margin-top: -10px;
+// h6 {
+//   margin-bottom: -3px;
+// }
+// }
+// // bottom: 0.25rem;
+// // padding-bottom: 0.25rem;
+// // padding-top: 0.25rem;
+// display: flex;
+// flex-direction: column;
+// align-items: center;
+// justify-content: center;
+
+// left: 50%;
+// top: 50%;
+// right: 0;
+// bottom: 0;
+// transform: translate(-50%, -50%);
+
+// p {
+//   margin-top: -10px;
+// }
 
 @media only screen and (min-width: 670px) {
   nav {

@@ -2,8 +2,7 @@ nav {
   position: fixed;
   z-index: 1;
   width: 100%;
-  background-color: black;
-  border-bottom: 1px solid $color-green;
+  background-color: rgba(0, 0, 0, 0.5);
   height: 3.5em;
 
   ul {
@@ -12,6 +11,9 @@ nav {
     list-style-type: none;
     padding: 10px;
     font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid $color-green;
+    margin-bottom: 0px;
 
     .logo {
       font-size: 1.7em;
