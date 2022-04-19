@@ -1,4 +1,5 @@
-/*576px for portrait phones.
+/*min width 320px.
+576px for portrait phones.
 768px for tablets.
 992px for laptops.
 1200px for large devices. */
@@ -163,9 +164,14 @@ nav ul li a:hover {
   margin-bottom: 300px;
 }
 
+#work .carousel-item {
+  min-height: 296px;
+  max-height: 70vh;
+}
+
 #work img {
+  min-height: 296px;
   opacity: 0.5;
-  min-height: 360px;
 }
 
 #work ul {
@@ -184,23 +190,29 @@ nav ul li a:hover {
   right: 0;
   bottom: 0;
   transform: translate(-50%, -50%);
+  width: 75%;
 }
 
 #work h5 {
   font-weight: bold;
   color: #fef200;
-  text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
-  margin-bottom: 1em;
+  text-shadow: -1.2px 0 black, 0 1.2px black, 1.2px 0 black, 0 -1.2px black;
 }
 
 #work h6 {
   font-size: 19.2px;
   font-weight: bolder;
   margin-bottom: -3px;
+  text-shadow: -1.2px 0 black, 0 1.2px black, 1.2px 0 black, 0 -1.2px black;
 }
 
 #work p {
   font-size: 16px;
+  text-shadow: -1.2px 0 black, 0 1.2px black, 1.2px 0 black, 0 -1.2px black;
+}
+
+#work .job-description {
+  margin-top: -1.2em;
 }
 
 @media only screen and (min-width: 670px) {
