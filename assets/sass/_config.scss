@@ -33,15 +33,18 @@
 
 body {
   font-family: "Source Sans Pro", sans-serif;
-  // font-size: 1em;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   color: white;
-  background-color: black;
+  background-color: white;
   line-height: normal;
 }
 
 //create space under fixed navbar
 article {
   padding-top: 70px;
+  background-color: black;
 }
 
 section {
@@ -52,11 +55,16 @@ section {
 $color-green: #00ff2a;
 $color-yellow: #fef200;
 
+// Sections' headings' underline hover effects
 .section-heading {
+  width: max-content;
+  margin: 0 auto 1em auto;
+
+  // text-align: center;
   font-weight: 900;
   color: $color-yellow;
   font-size: 2em;
-  margin-bottom: 1em;
+  // margin-bottom: 1em;
   position: relative;
   padding-bottom: 5px;
 
@@ -80,4 +88,14 @@ $color-yellow: #fef200;
       transform: scaleX(1);
     }
   }
+}
+
+.subheading {
+  font-weight: 900;
+  color: #ff0000;
+  // text-decoration: underline;
+  // text-decoration-color: $color-yellow;
+  // border-bottom: 2px solid $color-yellow;
+  font-size: 1.5em;
+  // text-shadow: -1.2px 0 black, 0 1.2px black, 1.2px 0 black, 0 -1.2px black;
 }

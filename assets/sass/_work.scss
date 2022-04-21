@@ -1,0 +1,64 @@
+#work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .carousel-item {
+    max-height: 75vh;
+  }
+
+  img {
+    min-height: 296px;
+    opacity: 0.5;
+  }
+
+  ul {
+    list-style-type: none;
+    font-size: smaller;
+    padding-left: 0;
+  }
+
+  .alignment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    width: 75%;
+
+    // hide slide content under 320px
+    @media (max-width: 319px) {
+      display: none;
+    }
+  }
+
+  h5,
+  h6,
+  p {
+    text-shadow: -1.2px 0 black, 0 1.2px black, 1.2px 0 black, 0 -1.2px black;
+  }
+
+  h5 {
+    font-weight: bold;
+    color: $color-yellow;
+  }
+
+  h6 {
+    font-size: 19.2px;
+    font-weight: bold;
+    margin-bottom: -3px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .job-description {
+    margin-top: -1.2em;
+  }
+}

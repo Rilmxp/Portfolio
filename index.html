@@ -45,25 +45,29 @@
 
     <article>
       <section id="about-me">
-        <img
-          src="/assets/img/profile-pic-small.jpg"
-          srcset="
-            /assets/img/profile-pic-big.jpg   1000w,
-            /assets/img/profile-pic-small.jpg  400w
-          "
-          sizes="(min-width: 300px) 300px, 100vw"
-          alt="Personal Picture"
-        />
-        <div class="inner-about-me">
-          <h1 class="section-heading">Richard Lucas</h1>
+        <h1 class="section-heading">Who I Am</h1>
+        <div class="flex-about-me">
+          <img
+            src="/assets/img/profile-pic-small.jpg"
+            srcset="
+              /assets/img/profile-pic-big.jpg   1000w,
+              /assets/img/profile-pic-small.jpg  400w
+            "
+            sizes="(min-width: 320px) 300px, 100vw"
+            alt="Personal Picture"
+          />
+          <div class="inner-about-me">
+            <h2 class="subheading name">Richard Lucas</h2>
 
-          <p>
-            Curiosity has led me to discover the fascinating world of web
-            development and I have been studying it since then. I see technology
-            and the web as a means to make life easier and jobs more efficient,
-            while also promoting progress. I am committed to apply my knowledge
-            to make a difference and have a positive impact on today's world.
-          </p>
+            <p>
+              Curiosity has led me to discover the fascinating world of web
+              development and I have been studying it since then. I see
+              technology and the web as a means to make life easier and jobs
+              more efficient, while also promoting progress. I am committed to
+              apply my knowledge to make a difference and have a positive impact
+              on today's world.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -75,9 +79,14 @@
           data-bs-interval="false"
         >
           <div class="carousel-inner">
-            <div class="carousel-item">
+            <div class="carousel-item active">
               <img
-                src="/assets/img/work.jpg"
+                src="/assets/img/work-3500w.jpg"
+                srcset="
+                  /assets/img/work-3500w.jpg 3500w,
+                  /assets/img/work-875w.jpg   875w
+                "
+                sizes="(max-width: 875px) 875w, 3500w "
                 class="d-block w-100"
                 alt="Buildings"
               />
@@ -93,11 +102,16 @@
             </div>
             <div class="carousel-item">
               <img
-                src="/assets/img/hotels-cropped.jpg"
+                srcset="
+                  /assets/img/hotels-875w.jpg   875w,
+                  /assets/img/hotels-3500w.jpg 3500w
+                "
+                sizes="(max-width: 875px) 875w, 3500w"
+                src="/assets/img/hotels-3500w.jpg"
                 class="d-block w-100"
                 alt="A Hotel Corridor"
               />
-              <div class="carousel-caption alignment hotel-experience">
+              <div class="carousel-caption alignment">
                 <h5>Hotels - Front Desk Agent</h5>
                 <ul>
                   <li>
@@ -119,9 +133,14 @@
                 </p>
               </div>
             </div>
-            <div class="carousel-item active">
+            <div class="carousel-item">
               <img
-                src="/assets/img/aviation-cropped.jpg"
+                srcset="
+                  /assets/img/aviation-875w.jpg   875w,
+                  /assets/img/aviation-3500w.jpg 3500w
+                "
+                sizes="(max-width: 875px) 875w, 3500w"
+                src="/assets/img/aviation-3500w.jpg"
                 class="d-block w-100"
                 alt="A Plane"
               />
@@ -161,10 +180,10 @@
       <div class="white-space"></div>
 
       <section id="education">
-        <h1>What I Know</h1>
-        <h4>Digital skills</h4>
-        <h4>Languages</h4>
-        <h4>Formal Education</h4>
+        <h1 class="section-heading">What I Know</h1>
+        <h4 class="subheading">Digital skills</h4>
+        <h4 class="subheading">Languages</h4>
+        <h4 class="subheading">Formal Education</h4>
       </section>
       <section id="interests">
         <h1>What I like</h1>

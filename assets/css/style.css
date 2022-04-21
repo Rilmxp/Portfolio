@@ -32,13 +32,17 @@
 
 body {
   font-family: "Source Sans Pro", sans-serif;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   color: white;
-  background-color: black;
+  background-color: white;
   line-height: normal;
 }
 
 article {
   padding-top: 70px;
+  background-color: black;
 }
 
 section {
@@ -47,10 +51,11 @@ section {
 }
 
 .section-heading {
+  width: max-content;
+  margin: 0 auto 1em auto;
   font-weight: 900;
   color: #fef200;
   font-size: 2em;
-  margin-bottom: 1em;
   position: relative;
   padding-bottom: 5px;
 }
@@ -75,6 +80,12 @@ section {
   transform: scaleX(1);
 }
 
+.subheading {
+  font-weight: 900;
+  color: #ff0000;
+  font-size: 1.5em;
+}
+
 /*To be removed, white space generator */
 .white-space {
   height: 100px;
@@ -85,6 +96,7 @@ nav {
   position: fixed;
   z-index: 1;
   width: 100%;
+  max-width: 1400px;
   background-color: rgba(0, 0, 0, 0.5);
   height: 3.5em;
 }
@@ -137,19 +149,19 @@ nav ul li a:hover {
   color: #00ff2a;
 }
 
-#about-me {
+#about-me .flex-about-me {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#about-me img {
+#about-me .flex-about-me img {
   border-radius: 50%;
   filter: grayscale(90%);
   border: 2px solid;
 }
 
-#about-me .inner-about-me {
+#about-me .flex-about-me .inner-about-me {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,12 +173,10 @@ nav ul li a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 300px;
 }
 
 #work .carousel-item {
-  min-height: 296px;
-  max-height: 70vh;
+  max-height: 75vh;
 }
 
 #work img {
@@ -193,22 +203,31 @@ nav ul li a:hover {
   width: 75%;
 }
 
+@media (max-width: 319px) {
+  #work .alignment {
+    display: none;
+  }
+}
+
+#work h5,
+#work h6,
+#work p {
+  text-shadow: -1.2px 0 black, 0 1.2px black, 1.2px 0 black, 0 -1.2px black;
+}
+
 #work h5 {
   font-weight: bold;
   color: #fef200;
-  text-shadow: -1.2px 0 black, 0 1.2px black, 1.2px 0 black, 0 -1.2px black;
 }
 
 #work h6 {
   font-size: 19.2px;
-  font-weight: bolder;
+  font-weight: bold;
   margin-bottom: -3px;
-  text-shadow: -1.2px 0 black, 0 1.2px black, 1.2px 0 black, 0 -1.2px black;
 }
 
 #work p {
   font-size: 16px;
-  text-shadow: -1.2px 0 black, 0 1.2px black, 1.2px 0 black, 0 -1.2px black;
 }
 
 #work .job-description {
@@ -229,11 +248,10 @@ nav ul li a:hover {
   nav ul li {
     margin-right: 13px;
   }
-  #about-me {
-    display: flex;
+  #about-me .flex-about-me {
     flex-direction: row;
   }
-  #about-me h1 {
+  #about-me .flex-about-me h2 {
     align-self: flex-start;
   }
 }

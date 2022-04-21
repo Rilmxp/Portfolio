@@ -10,81 +10,7 @@
 @import "navbar";
 @import "about";
 @import "custom";
-
-// WHAT IO'VE DONE SECTION - WORK -
-
-// for debugging
-// #carouselExampleControls {
-//   border: white solid 3px;
-// }
-
-#work {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 300px;
-
-  .carousel-item {
-    // border: 2px solid white;
-    // background-color: white;
-
-    min-height: 296px;
-    max-height: 70vh;
-  }
-
-  img {
-    min-height: 296px;
-    // align-self: center;
-    opacity: 0.5;
-    // object-position: 0px -180px;
-
-    // min-height: 360px;
-    // max-height: 70vh;
-  }
-
-  ul {
-    list-style-type: none;
-    font-size: smaller;
-    padding-left: 0;
-  }
-
-  .alignment {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    left: 50%;
-    top: 50%;
-    right: 0;
-    bottom: 0;
-    transform: translate(-50%, -50%);
-    width: 75%;
-  }
-
-  h5 {
-    font-weight: bold;
-    color: $color-yellow;
-    text-shadow: -1.2px 0 black, 0 1.2px black, 1.2px 0 black, 0 -1.2px black;
-    // margin-bottom: 1em;
-  }
-
-  h6 {
-    font-size: 19.2px;
-    font-weight: bolder;
-    margin-bottom: -3px;
-    text-shadow: -1.2px 0 black, 0 1.2px black, 1.2px 0 black, 0 -1.2px black;
-  }
-
-  p {
-    font-size: 16px;
-    text-shadow: -1.2px 0 black, 0 1.2px black, 1.2px 0 black, 0 -1.2px black;
-  }
-
-  .job-description {
-    margin-top: -1.2em;
-  }
-}
+@import "work";
 
 @media only screen and (min-width: 670px) {
   nav {
@@ -107,11 +33,12 @@
   }
 
   #about-me {
-    display: flex;
-    flex-direction: row;
+    .flex-about-me {
+      flex-direction: row;
 
-    h1 {
-      align-self: flex-start;
+      h2 {
+        align-self: flex-start;
+      }
     }
   }
 }
