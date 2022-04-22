@@ -92,10 +92,8 @@ $color-yellow: #fef200;
 
 .subheading {
   font-weight: 900;
-  color: #ff0000;
-  // text-decoration: underline;
-  // text-decoration-color: $color-yellow;
-  // border-bottom: 2px solid $color-yellow;
+  color: $color-yellow;
+  width: max-content;
+  border-bottom: 2px solid red;
   font-size: 1.5em;
-  // text-shadow: -1.2px 0 black, 0 1.2px black, 1.2px 0 black, 0 -1.2px black;
 }

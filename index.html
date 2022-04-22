@@ -57,7 +57,7 @@
             alt="Personal Picture"
           />
           <div class="inner-about-me">
-            <h2 class="subheading name">Richard Lucas</h2>
+            <h2 class="subheading">Richard Lucas</h2>
 
             <p>
               Curiosity has led me to discover the fascinating world of web
@@ -176,23 +176,62 @@
         </div>
       </section>
 
-      <!--For creating space purposes only, to be removed-->
-      <div class="white-space"></div>
-
       <section id="education">
         <h1 class="section-heading">What I Know</h1>
         <h4 class="subheading">Digital skills</h4>
+        <ul>
+          <li>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 70%"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </li>
+          <li>
+            <label for="css">CSS</label>
+            <progress id="css" max="100" value="40"></progress>
+          </li>
+          <li>
+            <label for="js">JAVASCRIPT</label>
+            <progress id="js" max="100" value="30"></progress>
+          </li>
+        </ul>
         <h4 class="subheading">Languages</h4>
         <h4 class="subheading">Formal Education</h4>
       </section>
+
+      <!--For creating space purposes only, to be removed-->
+      <div class="white-space"></div>
+
       <section id="interests">
-        <h1>What I like</h1>
+        <h1 class="section-heading">What I like</h1>
       </section>
       <section id="projects">
-        <h1>My projects</h1>
-        <p>coming soon...</p>
+        <h1 class="section-heading">My projects</h1>
+        <p class="subheading">Coming soon...</p>
       </section>
-      <footer></footer>
+
+      <footer>
+        <h5>Contact Me</h5>
+        <address>
+          Email: <a href="mailto:richardluca@gmail.com">Richard Lucas</a> <br />
+          Address: Via Casamia 1234, Milan, Italy <br />
+          Cel: 1234 456 789
+        </address>
+        <div class="flex-footer-1">
+          <a href="https://www.linkedin.com/feed/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/Rilmxp/"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+      </footer>
     </article>
 
     <script src="/assets/js/main.js"></script>

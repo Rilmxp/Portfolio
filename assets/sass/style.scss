@@ -11,6 +11,44 @@
 @import "about";
 @import "custom";
 @import "work";
+@import "footer";
+
+// EDUCATION
+
+#education {
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  li {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+
+  label {
+    display: block;
+  }
+
+  progress {
+    // Reset default appearance
+    -webkit-appearance: none;
+    appearance: none;
+    width: 250px;
+    height: 50px;
+  }
+
+  // container rules
+  progress::-webkit-progress-bar {
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) inset;
+  }
+
+  progress::-webkit-progress-value {
+    border-radius: 25px;
+  }
+}
 
 @media only screen and (min-width: 670px) {
   nav {

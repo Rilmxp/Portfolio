@@ -82,7 +82,9 @@ section {
 
 .subheading {
   font-weight: 900;
-  color: #ff0000;
+  color: #fef200;
+  width: max-content;
+  border-bottom: 2px solid red;
   font-size: 1.5em;
 }
 
@@ -232,6 +234,62 @@ nav ul li a:hover {
 
 #work .job-description {
   margin-top: -1.2em;
+}
+
+footer {
+  background-color: #001233;
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer h5 {
+  color: #fef200;
+  font-weight: bold;
+}
+
+footer i {
+  font-size: 2em;
+  margin: 0 10px;
+}
+
+footer a:visited, footer a:link {
+  color: white;
+}
+
+footer a:hover {
+  color: #00ff2a;
+}
+
+#education ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#education li {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+#education label {
+  display: block;
+}
+
+#education progress {
+  appearance: none;
+  width: 250px;
+  height: 50px;
+}
+
+#education progress::-webkit-progress-bar {
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) inset;
+}
+
+#education progress::-webkit-progress-value {
+  border-radius: 25px;
 }
 
 @media only screen and (min-width: 670px) {
