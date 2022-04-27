@@ -47,6 +47,8 @@ article {
 
 section {
   margin-bottom: 10px;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
   font-size: 1.2em;
 }
 
@@ -81,6 +83,7 @@ section {
 }
 
 .subheading {
+  margin-bottom: 0.5em;
   font-weight: 900;
   color: #fef200;
   width: max-content;
@@ -175,6 +178,8 @@ nav ul li a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 #work .carousel-item {
@@ -269,27 +274,36 @@ footer a:hover {
 
 #education li {
   font-size: 1.2em;
+  font-weight: bold;
   margin-bottom: 1em;
 }
 
-#education label {
-  display: block;
+#education table {
+  width: 100%;
+  border: 3px solid #00ff2a;
 }
 
-#education progress {
-  appearance: none;
-  width: 250px;
-  height: 50px;
+#education table th {
+  width: 30%;
 }
 
-#education progress::-webkit-progress-bar {
-  background-color: white;
-  border-radius: 25px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) inset;
+#education .flag-img {
+  max-width: 50px;
+  float: left;
+  padding-right: 5px;
 }
 
-#education progress::-webkit-progress-value {
-  border-radius: 25px;
+#education img {
+  width: 100%;
+}
+
+.progress {
+  border-radius: 0px 15px 15px 0px;
+}
+
+.progress-bar {
+  background: linear-gradient(to right, #fef200, #00ff2a);
+  opacity: 0.8;
 }
 
 @media only screen and (min-width: 670px) {

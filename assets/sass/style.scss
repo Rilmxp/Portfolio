@@ -23,31 +23,42 @@
 
   li {
     font-size: 1.2em;
+    font-weight: bold;
     margin-bottom: 1em;
   }
 
-  label {
-    display: block;
+  table {
+    width: 100%;
+    border: 3px solid $color-green;
+
+    th {
+      width: 30%;
+      // display: inline;
+    }
+
+    .language {
+    }
   }
 
-  progress {
-    // Reset default appearance
-    -webkit-appearance: none;
-    appearance: none;
-    width: 250px;
-    height: 50px;
+  .flag-img {
+    // display: inline;
+    max-width: 50px;
+    float: left;
+    padding-right: 5px;
   }
+  img {
+    width: 100%;
+    // display: block;
+  }
+}
 
-  // container rules
-  progress::-webkit-progress-bar {
-    background-color: white;
-    border-radius: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) inset;
-  }
+.progress {
+  border-radius: 0px 15px 15px 0px;
+}
 
-  progress::-webkit-progress-value {
-    border-radius: 25px;
-  }
+.progress-bar {
+  background: linear-gradient(to right, $color-yellow, $color-green);
+  opacity: 0.8;
 }
 
 @media only screen and (min-width: 670px) {
