@@ -83,7 +83,8 @@ section {
 }
 
 .subheading {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
+  margin-top: 0.8em;
   font-weight: 900;
   color: #fef200;
   width: max-content;
@@ -267,12 +268,7 @@ footer a:hover {
   color: #00ff2a;
 }
 
-#education ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-#education li {
+#education .digital-skills li {
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 1em;
@@ -280,28 +276,63 @@ footer a:hover {
 
 #education table {
   width: 100%;
-  border: 3px solid #00ff2a;
+}
+
+#education table tr:hover {
+  background-color: #001233;
+}
+
+#education table th,
+#education table td {
+  height: 60px;
+  width: 33.3%;
+  text-align: center;
 }
 
 #education table th {
-  width: 30%;
-}
-
-#education .flag-img {
-  max-width: 50px;
-  float: left;
-  padding-right: 5px;
+  border-bottom: 1.2px solid white;
+  padding-bottom: 5px;
 }
 
 #education img {
-  width: 100%;
+  max-width: 50px;
+  margin: 0 auto;
+}
+
+#education h3 {
+  font-weight: bold;
+  margin-bottom: 0;
+  font-size: 1.3rem;
+}
+
+#education h3 + p {
+  font-size: smaller;
+  font-weight: bold;
+}
+
+#education ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#education ul h3::before {
+  content: "\f19d";
+  font-family: "Font Awesome 5 Free";
+  padding-right: 10px;
+  color: #00ff2a;
+}
+
+#education ul p {
+  padding-left: 36px;
 }
 
 .progress {
   border-radius: 0px 15px 15px 0px;
+  height: 1.5em;
 }
 
 .progress-bar {
+  border-radius: 0px 15px 15px 0px;
   background: linear-gradient(to right, #fef200, #00ff2a);
   opacity: 0.8;
 }

@@ -16,47 +16,77 @@
 // EDUCATION
 
 #education {
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
+  // Digital skills subsection
 
-  li {
+  .digital-skills li {
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 1em;
   }
 
+  // languages subsection
   table {
     width: 100%;
-    border: 3px solid $color-green;
+
+    tr:hover {
+      background-color: #001233;
+    }
+
+    th,
+    td {
+      height: 60px;
+      width: 33.3%;
+      text-align: center;
+    }
 
     th {
-      width: 30%;
-      // display: inline;
-    }
-
-    .language {
+      border-bottom: 1.2px solid white;
+      padding-bottom: 5px;
     }
   }
 
-  .flag-img {
-    // display: inline;
-    max-width: 50px;
-    float: left;
-    padding-right: 5px;
-  }
   img {
-    width: 100%;
-    // display: block;
+    max-width: 50px;
+    margin: 0 auto;
+  }
+
+  // Formal education subsection
+
+  h3 {
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 1.3rem;
+
+    & + p {
+      font-size: smaller;
+      font-weight: bold;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+
+    & h3::before {
+      content: "\f19d";
+      font-family: "Font Awesome 5 Free";
+      padding-right: 10px;
+      color: $color-green;
+    }
+
+    p {
+      padding-left: 36px;
+    }
   }
 }
 
 .progress {
   border-radius: 0px 15px 15px 0px;
+  height: 1.5em;
 }
 
 .progress-bar {
+  border-radius: 0px 15px 15px 0px;
   background: linear-gradient(to right, $color-yellow, $color-green);
   opacity: 0.8;
 }
