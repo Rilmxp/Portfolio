@@ -56,6 +56,7 @@ section {
 
 $color-green: #00ff2a;
 $color-yellow: #fef200;
+$color-blue: #001233;
 
 // Sections' headings' underline hover effects
 .section-heading {
@@ -84,7 +85,7 @@ $color-yellow: #fef200;
   }
 
   &:hover {
-    color: $color-yellow;
+    // color: $color-yellow;
 
     &::after {
       transform: scaleX(1);

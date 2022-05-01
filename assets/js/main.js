@@ -1,9 +1,9 @@
+//// NAVBAR - start -  ////
+//////////////////////////
 const toggleBtn = document.querySelector(".btn-toggle");
 const toggleIcon = document.querySelector(".btn-toggle i");
 const navListItems = document.querySelectorAll(".page-links li a ");
 
-//// NAVBAR LOGIC ////
-/////////////////////
 let openMenu = false;
 
 // Toggle button navbar menu
@@ -37,5 +37,49 @@ mediaObj.onchange = (e) => {
     toggleIcon.classList = "fa-solid fa-bars";
   }
 };
-// END NAVBAR LOGIC //
+//  NAVBAR - end - //
 /////////////////////
+
+// ACCORDION (PROJECTS) - start -  ////
+////////////////////////////////////
+
+const btnAccordion = document.querySelectorAll(".group-btns button");
+const accordionContent = document.querySelectorAll(".group-btns div");
+
+console.log(btnAccordion, accordionContent);
+
+// listener to buttons
+for (i = 0; i < btnAccordion.length; i++) {
+  btnAccordion[i].addEventListener("click", function () {
+    if (!this.classList.contains("active")) {
+      btnAccordion.forEach((item) => item.classList.remove("active"));
+      this.classList.toggle("active");
+    } else {
+      this.classList.remove("active");
+    }
+
+    // get index of clicked button to match to index of content
+    let btnIndex;
+    for (const [key, value] of Object.entries(btnAccordion)) {
+      if (value === this) {
+        btnIndex = Number(key);
+      }
+    }
+
+    // show/hide content
+    for (let y = 0; y < accordionContent.length; y++) {
+      if (y === btnIndex) {
+        if (accordionContent[y].style.maxHeight) {
+          accordionContent.forEach((item) => (item.style.maxHeight = null));
+        } else {
+          accordionContent.forEach((item) => (item.style.maxHeight = null));
+          accordionContent[y].style.maxHeight =
+            100 + accordionContent[y].scrollHeight + "px";
+        }
+      }
+    }
+  });
+}
+
+// ACCORDION (PROJECTS) - end -  ////
+////////////////////////////////////

@@ -1,95 +1,108 @@
 @import "config";
 
-/*To be removed, white space generator */
-.white-space {
-  // margin-top: 100px;
-  height: 100px;
-  border: 3px dotted blue;
-}
-
 @import "navbar";
 @import "about";
 @import "custom";
 @import "work";
 @import "footer";
+@import "education";
 
-// EDUCATION
+// Projects section
 
-#education {
-  // Digital skills subsection
-
-  .digital-skills li {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 1em;
-  }
-
-  // languages subsection
-  table {
-    width: 100%;
-
-    tr:hover {
-      background-color: #001233;
-    }
-
-    th,
-    td {
-      height: 60px;
-      width: 33.3%;
-      text-align: center;
-    }
-
-    th {
-      border-bottom: 1.2px solid white;
-      padding-bottom: 5px;
-    }
-  }
-
-  img {
-    max-width: 50px;
-    margin: 0 auto;
-  }
-
-  // Formal education subsection
-
-  h3 {
-    font-weight: bold;
-    margin-bottom: 0;
-    font-size: 1.3rem;
-
-    & + p {
-      font-size: smaller;
-      font-weight: bold;
-    }
-  }
-
-  ul {
+#projects {
+  .group-btns {
     list-style-type: none;
     padding-left: 0;
+    // text-align: center;
 
-    // bullet point graduation icon
-    h3::before {
-      content: "\f19d";
-      font-family: "Font Awesome 5 Free";
-      padding-right: 10px;
-      color: $color-green;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    // margin: 0 auto;
 
-    p {
-      padding-left: 36px;
+    li {
+      text-align: center;
+      // flex: 1 1 50%;
     }
   }
-}
 
-.progress {
-  border-radius: 0px 15px 15px 0px;
-  height: 1.5em;
-}
+  button {
+    // display: inline;
+    // font-size: 1em;
+    font-weight: bold;
+    padding: 0.3em;
+    // padding: 0.5em;
+    border-radius: 35px;
+    width: 75%;
+    border: 3px solid $color-yellow;
+    color: white;
+    background: black;
+    margin-top: 1em;
 
-.progress-bar {
-  border-radius: 0px 15px 15px 0px;
-  background: linear-gradient(to right, $color-yellow, $color-green);
-  opacity: 0.8;
+    // &:hover {
+    //   background-color: red;
+    // }
+  }
+
+  .active,
+  button:hover {
+    background-color: $color-blue;
+    color: $color-yellow;
+  }
+
+  div {
+    margin-top: 0.2em;
+    // margin-bottom: 1em;
+    // width: 100%;
+    // border: 3px solid $color-yellow;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+
+  a {
+    position: relative;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 35px;
+    padding: 5px;
+    display: block;
+    margin-bottom: 10px;
+    width: 42%;
+    margin: 10px auto;
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: white;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      transform: scaleX(0);
+      transition: transform 500ms ease;
+    }
+
+    &:hover {
+      &::before {
+        transform: scaleX(1);
+        background-color: $color-blue;
+        border-radius: 35px;
+        content: "GO";
+        padding-top: 4px;
+        color: $color-green;
+        border-color: $color-green;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 670px) {
@@ -123,7 +136,7 @@
   }
 
   #education {
-    .flex-education-0 {
+    .flex-education {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
@@ -133,32 +146,33 @@
         margin-right: auto;
       }
 
-      .flex-education-1 {
+      .flex-education-digital,
+      .flex-education-languages {
         width: 45%;
-        text-align: center;
+      }
 
-        h4 {
-          margin-left: auto;
-          margin-right: auto;
-        }
+      .flex-education-digital {
+        text-align: center;
 
         .progress {
           border-radius: 15px 15px 15px 15px;
         }
       }
-      .flex-education-2 {
-        width: 45%;
-
+      .flex-education-languages {
+        display: flex;
+        flex-direction: column;
         table {
-          margin-top: 75px;
+          margin: auto auto;
         }
       }
     }
 
-    .flex-education-3 {
+    .flex-education-formal {
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 80%;
+      margin: auto;
     }
   }
 }
