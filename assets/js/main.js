@@ -18,9 +18,21 @@ toggleBtn.addEventListener("click", function () {
   }
 });
 
+// close menu when click on list item
+for (i = 0; i < navListItems.length; i++) {
+  navListItems[i].addEventListener("click", function () {
+    if (openMenu) {
+      navListItems.forEach((item) => item.classList.toggle("show-hide"));
+      toggleIcon.classList = "fa-solid fa-bars";
+      openMenu = false;
+    }
+  });
+}
+
+//
+// Show navbar items when init on wide screen
 const mediaObj = window.matchMedia("(min-width: 670px)");
 
-// Show navbar items when init on wide screen
 if (mediaObj.matches) {
   navListItems.forEach((item) => item.classList.remove("show-hide"));
 }
@@ -44,7 +56,7 @@ mediaObj.onchange = (e) => {
 ////////////////////////////////////
 
 const btnAccordion = document.querySelectorAll(".group-btns button");
-const accordionContent = document.querySelectorAll(".group-btns div");
+const accordionContent = document.querySelectorAll(".group-btns li div");
 
 console.log(btnAccordion, accordionContent);
 

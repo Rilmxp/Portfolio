@@ -59,7 +59,7 @@ section {
   color: #fef200;
   font-size: 2em;
   position: relative;
-  padding-bottom: 5px;
+  padding-top: 55px;
 }
 
 .section-heading::after {
@@ -93,7 +93,7 @@ nav {
   z-index: 2;
   width: 100%;
   max-width: 1400px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: black;
   height: 3.5em;
 }
 
@@ -103,8 +103,8 @@ nav ul {
   list-style-type: none;
   padding: 10px;
   font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-bottom: 1px solid #00ff2a;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-bottom: 1.5px solid #00ff2a;
   margin-bottom: 0px;
 }
 
@@ -243,6 +243,7 @@ footer {
 footer h5 {
   color: #fef200;
   font-weight: bold;
+  padding-top: 15px;
 }
 
 footer i {
@@ -338,8 +339,15 @@ footer a:hover {
   align-items: center;
 }
 
-#projects .group-btns li {
+#projects .group-btns div li {
   text-align: center;
+}
+
+#projects .group-btns div li div {
+  margin-top: 0.2em;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
 }
 
 #projects h5 {
@@ -361,13 +369,6 @@ footer a:hover {
 #projects button:hover {
   background-color: #001233;
   color: #00ff2a;
-}
-
-#projects div {
-  margin-top: 0.2em;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s;
 }
 
 #projects a {
@@ -461,22 +462,26 @@ footer a:hover {
     width: 80%;
     margin: auto;
   }
-  #projects .group-btns {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
+  #projects {
+    /* buttons half the size to match the size of the other 2 columns*/
   }
-  #projects .group-btns li {
-    flex-basis: 50%;
+  #projects .flex-center-col button {
+    width: 37.5%;
   }
-  #projects .group-btns li:first-of-type {
-    flex-basis: 100%;
-  }
-  #projects .group-btns li:first-of-type a {
+  #projects .flex-center-col a {
     width: 21%;
   }
-  #projects .group-btns li:first-of-type button {
-    width: 37%;
+  #projects .flex-left-right-col {
+    display: flex;
+  }
+  #projects .flex-left-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #projects .flex-right-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 }

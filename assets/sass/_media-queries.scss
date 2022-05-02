@@ -1,0 +1,101 @@
+// Media query for the whole page
+
+@media only screen and (min-width: 670px) {
+  nav {
+    ul {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .page-links {
+        flex-direction: row;
+      }
+
+      .btn-toggle {
+        display: none;
+      }
+
+      li {
+        margin-right: 13px;
+      }
+    }
+  }
+
+  #about-me {
+    .flex-about-me {
+      flex-direction: row;
+
+      h2 {
+        align-self: flex-start;
+      }
+    }
+  }
+
+  #education {
+    .flex-education {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      h4 {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .flex-education-digital,
+      .flex-education-languages {
+        width: 45%;
+      }
+
+      .flex-education-digital {
+        text-align: center;
+
+        .progress {
+          border-radius: 15px 15px 15px 15px;
+        }
+      }
+      .flex-education-languages {
+        display: flex;
+        flex-direction: column;
+        table {
+          margin: auto auto;
+        }
+      }
+    }
+
+    .flex-education-formal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      margin: auto;
+    }
+  }
+
+  #projects {
+    /* buttons half the size to match the size of the other 2 columns*/
+    .flex-center-col {
+      button {
+        width: 37.5%;
+      }
+      a {
+        width: 21%;
+      }
+    }
+
+    .flex-left-right-col {
+      display: flex;
+    }
+
+    .flex-left-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .flex-right-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+}
