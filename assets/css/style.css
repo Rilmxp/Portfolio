@@ -90,7 +90,7 @@ section {
 
 nav {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   max-width: 1400px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -342,6 +342,10 @@ footer a:hover {
   text-align: center;
 }
 
+#projects h5 {
+  font-weight: bold;
+}
+
 #projects button {
   font-weight: bold;
   padding: 0.3em;
@@ -356,7 +360,7 @@ footer a:hover {
 #projects .active,
 #projects button:hover {
   background-color: #001233;
-  color: #fef200;
+  color: #00ff2a;
 }
 
 #projects div {
@@ -456,5 +460,23 @@ footer a:hover {
     align-items: center;
     width: 80%;
     margin: auto;
+  }
+  #projects .group-btns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  #projects .group-btns li {
+    flex-basis: 50%;
+  }
+  #projects .group-btns li:first-of-type {
+    flex-basis: 100%;
+  }
+  #projects .group-btns li:first-of-type a {
+    width: 21%;
+  }
+  #projects .group-btns li:first-of-type button {
+    width: 37%;
   }
 }

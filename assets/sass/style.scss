@@ -28,6 +28,10 @@
     }
   }
 
+  h5 {
+    font-weight: bold;
+  }
+
   button {
     // display: inline;
     // font-size: 1em;
@@ -49,7 +53,7 @@
   .active,
   button:hover {
     background-color: $color-blue;
-    color: $color-yellow;
+    color: $color-green;
   }
 
   div {
@@ -174,5 +178,61 @@
       width: 80%;
       margin: auto;
     }
+  }
+
+  #projects {
+    .group-btns {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+
+      li {
+        flex-basis: 50%;
+
+        &:first-of-type {
+          // display: block;
+          // justify-self: center;
+          flex-basis: 100%;
+
+          a {
+            width: 21%;
+          }
+          button {
+            width: 37%;
+          }
+        }
+
+        // #project-1 {
+        //   width: 75%;
+        // }
+
+        // button:first-of-type {
+        //   width: 50%;
+        // }
+      }
+    }
+
+    // justify-content: center;
+
+    // &:last-child {
+    //   justify-content: center;
+    // }
+
+    // li {
+    //   // &:first-of-type {
+    //   //   flex-basis: 100%;
+    //   //   flex-grow: 1;
+    //   // }
+    //   //   justify-content: center;
+    //   //   display: block;
+    //   // flex-basis: 50%;
+    //   // width: 30%;
+    //   // button {
+    //   //   width: 50%;
+    //   // }
+
+    //   flex-basis: 50%;
+    // }
   }
 }

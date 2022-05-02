@@ -40,7 +40,7 @@ mediaObj.onchange = (e) => {
 //  NAVBAR - end - //
 /////////////////////
 
-// ACCORDION (PROJECTS) - start -  ////
+// ACCORDION (PROJECTS) - start -  //
 ////////////////////////////////////
 
 const btnAccordion = document.querySelectorAll(".group-btns button");
@@ -74,7 +74,7 @@ for (i = 0; i < btnAccordion.length; i++) {
         } else {
           accordionContent.forEach((item) => (item.style.maxHeight = null));
           accordionContent[y].style.maxHeight =
-            100 + accordionContent[y].scrollHeight + "px";
+            accordionContent[y].scrollHeight + "px";
         }
       }
     }
