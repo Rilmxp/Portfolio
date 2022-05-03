@@ -21,22 +21,28 @@
     ></script>
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>My Portfolio</title>
+    <link rel="icon" href="/assets/img/favicon-32x32.png" type="image/x-icon" />
   </head>
   <body>
     <header>
       <nav>
         <ul>
           <div class="logo-toggle">
-            <li class="logo">My Portfolio</li>
+            <li class="logo"><a href="#about-me">My Portfolio</a></li>
             <li class="btn-toggle">
-              <i style="font-size: 1.6em" class="fa-solid fa-bars"></i>
+              <button
+                aria-controls="menu"
+                aria-expanded="false"
+                aria-label="menu toggle button"
+              >
+                <i class="fa-solid fa-bars"></i>
+              </button>
             </li>
           </div>
-          <div class="page-links">
+          <div id="menu" class="page-links">
             <li><a class="show-hide" href="#about-me">About</a></li>
             <li><a class="show-hide" href="#work">Work</a></li>
             <li><a class="show-hide" href="#education">Education</a></li>
-            <!-- <li><a class="show-hide" href="#interests">Interests</a></li> -->
             <li><a class="show-hide" href="#projects">Projects</a></li>
           </div>
         </ul>
@@ -290,7 +296,11 @@
               >
                 PROJECT ONE
               </button>
-              <div id="project-1-content">
+              <div
+                id="project-1-content"
+                role="region"
+                aria-labelledby="project-1"
+              >
                 <h5>Project Description</h5>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
@@ -305,8 +315,18 @@
           <div class="flex-left-right-col">
             <div class="flex-left-col">
               <li>
-                <button id="project-2">PROJECT TWO</button>
-                <div id="project-2-content">
+                <button
+                  id="project-2"
+                  aria-expanded="false"
+                  aria-controls="project-2-content"
+                >
+                  PROJECT TWO
+                </button>
+                <div
+                  id="project-2-content"
+                  role="region"
+                  aria-labelledby="project-2"
+                >
                   <h5>Project Description</h5>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -319,8 +339,18 @@
               </li>
 
               <li>
-                <button>PROJECT THREE</button>
-                <div id="project-3-content">
+                <button
+                  id="project-3"
+                  aria-expanded="false"
+                  aria-controls="project-3-content"
+                >
+                  PROJECT THREE
+                </button>
+                <div
+                  id="project-3-content"
+                  role="region"
+                  aria-labelledby="project-3"
+                >
                   <h5>Project Description</h5>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -334,8 +364,18 @@
             </div>
             <div class="flex-right-col">
               <li>
-                <button>PROJECT FOUR</button>
-                <div id="project-4-content">
+                <button
+                  id="project-4"
+                  aria-expanded="false"
+                  aria-controls="project-4-content"
+                >
+                  PROJECT FOUR
+                </button>
+                <div
+                  id="project-4-content"
+                  role="region"
+                  aria-labelledby="project-4"
+                >
                   <h5>Project Description</h5>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -347,8 +387,18 @@
                 </div>
               </li>
               <li>
-                <button>PROJECT FIVE</button>
-                <div id="project-5-content">
+                <button
+                  id="project-5"
+                  aria-expanded="false"
+                  aria-controls="project-5-content"
+                >
+                  PROJECT FIVE
+                </button>
+                <div
+                  id="project-5-content"
+                  role="region"
+                  aria-labelledby="project-5"
+                >
                   <h5>Project Description</h5>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.

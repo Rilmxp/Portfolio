@@ -16,18 +16,26 @@ nav {
     border-bottom: 1.5px solid $color-green;
     margin-bottom: 0px;
 
-    .logo {
-      font-size: 1.7em;
-      color: $color-green;
-    }
-
-    .btn-toggle:hover {
-      color: $color-green;
+    .logo a {
+      color: $color-green !important;
+      font-size: 1.3em;
     }
 
     .logo-toggle {
       display: flex;
       justify-content: space-between;
+    }
+
+    button {
+      background-color: black;
+      color: white;
+      border: none;
+      font-size: 1.3em;
+      padding: 1px 1px;
+
+      :hover {
+        color: $color-green;
+      }
     }
 
     .page-links {
