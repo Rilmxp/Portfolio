@@ -33,9 +33,15 @@ nav {
       font-size: 1.3em;
       padding: 1px 1px;
 
-      :hover {
+      transition: transform 1s ease;
+
+      &:hover {
         color: $color-green;
       }
+    }
+
+    .btn-rotate {
+      transform: rotate(180deg);
     }
 
     .page-links {

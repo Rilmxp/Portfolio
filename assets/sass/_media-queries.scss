@@ -1,4 +1,4 @@
-// Media query for the whole page
+// Media queries for the whole page
 
 @media only screen and (min-width: 670px) {
   nav {
@@ -17,6 +17,12 @@
       li {
         margin-right: 13px;
       }
+    }
+  }
+
+  #work {
+    .alignment * {
+      font-size: 1.2rem;
     }
   }
 

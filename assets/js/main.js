@@ -2,8 +2,8 @@
 
 //// NAVBAR - start -  ////
 //////////////////////////
-const toggleBtn = document.querySelector(".btn-toggle");
-const toggleIcon = document.querySelector(".btn-toggle button");
+const toggleBtn = document.querySelector(".btn-toggle button");
+const toggleIcon = document.querySelector(".btn-toggle button i");
 const navListItems = document.querySelectorAll(".page-links li a ");
 
 let openMenu = false;
@@ -14,11 +14,13 @@ toggleBtn.addEventListener("click", function () {
   if (!openMenu) {
     toggleIcon.classList = "fa-solid fa-xmark";
     openMenu = true;
-    toggleIcon.setAttribute("aria-expanded", "true");
+    toggleBtn.setAttribute("aria-expanded", "true");
+    toggleBtn.classList.toggle("btn-rotate");
   } else {
     toggleIcon.classList = "fa-solid fa-bars";
     openMenu = false;
-    toggleIcon.setAttribute("aria-expanded", "false");
+    toggleBtn.setAttribute("aria-expanded", "false");
+    toggleBtn.classList.toggle("btn-rotate");
   }
 });
 
@@ -29,7 +31,7 @@ for (let i = 0; i < navListItems.length; i++) {
       navListItems.forEach((item) => item.classList.toggle("show-hide"));
       toggleIcon.classList = "fa-solid fa-bars";
       openMenu = false;
-      toggleIcon.setAttribute("aria-expanded", "false");
+      toggleBtn.setAttribute("aria-expanded", "false");
     }
   });
 }
@@ -39,7 +41,7 @@ const mediaObj = window.matchMedia("(min-width: 670px)");
 
 if (mediaObj.matches) {
   navListItems.forEach((item) => item.classList.remove("show-hide"));
-  toggleIcon.setAttribute("aria-expanded", "true");
+  toggleBtn.setAttribute("aria-expanded", "true");
 }
 
 // show/hide navbar items upon media query change.
@@ -47,13 +49,13 @@ mediaObj.onchange = (e) => {
   if (e.matches) {
     if (navListItems[0].classList.contains("show-hide")) {
       navListItems.forEach((item) => item.classList.remove("show-hide"));
-      toggleIcon.setAttribute("aria-expanded", "true");
+      toggleBtn.setAttribute("aria-expanded", "true");
     }
   } else {
     navListItems.forEach((item) => item.classList.add("show-hide"));
     openMenu = false;
     toggleIcon.classList = "fa-solid fa-bars";
-    toggleIcon.setAttribute("aria-expanded", "false");
+    toggleBtn.setAttribute("aria-expanded", "false");
   }
 };
 //  NAVBAR - end - //

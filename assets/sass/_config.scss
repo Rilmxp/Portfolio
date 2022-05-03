@@ -61,7 +61,7 @@ $color-blue: #001233;
   font-size: 2em;
   position: relative;
 
-  //create space navbar - heading when scrolled
+  // space navbar/heading when scrolled from navbar menu
   padding-top: 60px;
 
   // Sections' headings' underline hover effects
@@ -69,18 +69,20 @@ $color-blue: #001233;
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -5px;
     height: 3px;
     background-color: $color-green;
     width: 100%;
 
     transform: scaleX(0);
-    transition: transform 300ms ease;
+    transform-origin: right;
+    transition: transform 600ms ease;
   }
 
   &:hover {
     &::after {
       transform: scaleX(1);
+      transform-origin: left;
     }
   }
 }
