@@ -36,12 +36,10 @@ body {
 }
 
 article {
-  padding-top: 30px;
   background-color: black;
 }
 
 section {
-  margin-bottom: 8px;
   margin-left: 0.5em;
   margin-right: 0.5em;
   font-size: 1.2em;
@@ -54,7 +52,9 @@ section {
   color: #fef200;
   font-size: 2em;
   position: relative;
-  padding-top: 60px;
+  /* space navbar/heading when scrolled from navbar menu */
+  padding-top: 70px;
+  /* Sections' headings' underline hover effects */
 }
 
 .section-heading::after {
@@ -65,6 +65,7 @@ section {
   height: 3px;
   background-color: #00ff2a;
   width: 100%;
+  border-radius: 15px;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 600ms ease;
@@ -163,7 +164,7 @@ nav ul li a:hover {
 
 #about-me .flex-about-me img {
   border-radius: 50%;
-  filter: grayscale(90%);
+  filter: grayscale(85%);
   border: 2px solid;
 }
 
@@ -209,6 +210,7 @@ nav ul li a:hover {
   bottom: 0;
   transform: translate(-50%, -50%);
   width: 75%;
+  /* hide slide content under 320px */
 }
 
 @media (max-width: 319px) {
@@ -270,6 +272,12 @@ footer a:hover {
   color: #00ff2a;
 }
 
+#education {
+  /* Digital skills subsection */
+  /* languages subsection */
+  /* Formal education subsection */
+}
+
 #education .digital-skills li {
   font-size: 1.2em;
   font-weight: bold;
@@ -329,6 +337,7 @@ footer a:hover {
 #education ul {
   list-style-type: none;
   padding-left: 0;
+  /* bullet point graduation icon */
 }
 
 #education ul h3::before {
@@ -392,6 +401,7 @@ footer a:hover {
   margin-bottom: 10px;
   width: 42%;
   margin: 10px auto;
+  /* view project/go animation */
 }
 
 #projects a:link, #projects a:visited {
@@ -475,7 +485,7 @@ footer a:hover {
     margin: auto;
   }
   #projects {
-    /* buttons half the size to match the size of the other 2 columns*/
+    /* button & <a> center col half the size to match the size of the other 2 columns below it*/
   }
   #projects .flex-center-col button {
     width: 37.5%;

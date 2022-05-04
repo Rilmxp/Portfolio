@@ -1,5 +1,5 @@
 #education {
-  // Digital skills subsection
+  /* Digital skills subsection */
   .digital-skills li {
     font-size: 1.2em;
     font-weight: bold;
@@ -20,7 +20,7 @@
     opacity: 0.8;
   }
 
-  // languages subsection
+  /* languages subsection */
   table {
     width: 100%;
 
@@ -46,7 +46,7 @@
     margin: 0 auto;
   }
 
-  // Formal education subsection
+  /* Formal education subsection */
 
   h3 {
     font-weight: bold;
@@ -63,7 +63,7 @@
     list-style-type: none;
     padding-left: 0;
 
-    // bullet point graduation icon
+    /* bullet point graduation icon */
     h3::before {
       content: "\f19d";
       font-family: "Font Awesome 5 Free";

@@ -33,7 +33,7 @@
     transform: translate(-50%, -50%);
     width: 75%;
 
-    // hide slide content under 320px
+    /* hide slide content under 320px */
     @media (max-width: 319px) {
       display: none;
     }

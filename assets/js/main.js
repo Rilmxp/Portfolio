@@ -1,7 +1,7 @@
 "use strict";
-
+////////////////////////////
 //// NAVBAR - start -  ////
-//////////////////////////
+
 const toggleBtn = document.querySelector(".btn-toggle button");
 const toggleIcon = document.querySelector(".btn-toggle button i");
 const navListItems = document.querySelectorAll(".page-links li a ");
@@ -58,11 +58,12 @@ mediaObj.onchange = (e) => {
     toggleBtn.setAttribute("aria-expanded", "false");
   }
 };
+
 //  NAVBAR - end - //
 /////////////////////
 
+//////////////////////////////////////
 // ACCORDION (PROJECTS) - start -  //
-////////////////////////////////////
 
 const btnAccordion = document.querySelectorAll(".group-btns button");
 const accordionContent = document.querySelectorAll(".group-btns li div");

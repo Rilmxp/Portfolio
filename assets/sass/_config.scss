@@ -35,14 +35,11 @@ body {
   line-height: normal;
 }
 
-//create space under fixed navbar
 article {
-  padding-top: 30px;
   background-color: black;
 }
 
 section {
-  margin-bottom: 8px;
   margin-left: 0.5em;
   margin-right: 0.5em;
   font-size: 1.2em;
@@ -61,10 +58,10 @@ $color-blue: #001233;
   font-size: 2em;
   position: relative;
 
-  // space navbar/heading when scrolled from navbar menu
-  padding-top: 60px;
+  /* space navbar/heading when scrolled from navbar menu */
+  padding-top: 70px;
 
-  // Sections' headings' underline hover effects
+  /* Sections' headings' underline hover effects */
   &::after {
     content: "";
     position: absolute;
@@ -73,6 +70,7 @@ $color-blue: #001233;
     height: 3px;
     background-color: $color-green;
     width: 100%;
+    border-radius: 15px;
 
     transform: scaleX(0);
     transform-origin: right;
