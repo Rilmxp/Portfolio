@@ -318,7 +318,7 @@ footer a:hover {
   vertical-align: middle;
 }
 
-#education img {
+#education table img {
   max-width: 50px;
   margin: 0 auto;
 }
@@ -451,33 +451,33 @@ footer a:hover {
   #about-me .flex-about-me h2 {
     align-self: flex-start;
   }
-  #education .flex-education {
+  .flex-education {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
-  #education .flex-education h4 {
+  .flex-education h4 {
     margin-left: auto;
     margin-right: auto;
   }
-  #education .flex-education .flex-education-digital,
-  #education .flex-education .flex-education-languages {
+  .flex-education .flex-education-digital,
+  .flex-education .flex-education-languages {
     width: 45%;
   }
-  #education .flex-education .flex-education-digital {
+  .flex-education .flex-education-digital {
     text-align: center;
   }
-  #education .flex-education .flex-education-digital .progress {
+  .flex-education .flex-education-digital .progress {
     border-radius: 15px 15px 15px 15px;
   }
-  #education .flex-education .flex-education-languages {
+  .flex-education .flex-education-languages {
     display: flex;
     flex-direction: column;
   }
-  #education .flex-education .flex-education-languages table {
+  .flex-education .flex-education-languages table {
     margin: auto auto;
   }
-  #education .flex-education-formal {
+  .flex-education-formal {
     display: flex;
     flex-direction: column;
     align-items: center;

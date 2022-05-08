@@ -1,6 +1,6 @@
 "use strict";
-////////////////////////////
-//// NAVBAR - start -  ////
+///////////////////
+//// NAVBAR   ////
 
 const toggleBtn = document.querySelector(".btn-toggle button");
 const toggleIcon = document.querySelector(".btn-toggle button i");
@@ -59,11 +59,10 @@ mediaObj.onchange = (e) => {
   }
 };
 
-//  NAVBAR - end - //
-/////////////////////
+//////////////////////////////////////////////////////////////////////////7
 
-//////////////////////////////////////
-// ACCORDION (PROJECTS) - start -  //
+//////////////////////////
+// ACCORDION (PROJECTS) //
 
 const btnAccordion = document.querySelectorAll(".group-btns button");
 const accordionContent = document.querySelectorAll(".group-btns li div");
@@ -105,5 +104,4 @@ for (let i = 0; i < btnAccordion.length; i++) {
   });
 }
 
-// ACCORDION (PROJECTS) - end -  ////
-////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
