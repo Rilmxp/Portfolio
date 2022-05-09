@@ -20,19 +20,19 @@
     }
   }
 
-  #work {
-    .alignment * {
-      font-size: 1.2rem;
-    }
-  }
-
   #about-me {
     .flex-about-me {
       flex-direction: row;
 
-      h2 {
+      h3 {
         align-self: flex-start;
       }
+    }
+  }
+
+  #work {
+    .alignment * {
+      font-size: 1.2rem;
     }
   }
 

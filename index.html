@@ -32,6 +32,7 @@
               <li class="logo"><a href="#about-me">My Portfolio</a></li>
               <li class="btn-toggle">
                 <button
+                  type="button"
                   aria-controls="menu"
                   aria-expanded="false"
                   aria-label="menu toggle button"
@@ -55,7 +56,7 @@
 
     <article>
       <section id="about-me">
-        <h1 class="section-heading">Who I Am</h1>
+        <h2 class="section-heading">Who I Am</h2>
         <div class="flex-about-me">
           <img
             src="/assets/img/profile-pic-small.jpg"
@@ -67,7 +68,7 @@
             alt="Personal Picture"
           />
           <div class="inner-about-me">
-            <h2 class="subheading">Richard Lucas</h2>
+            <h3 class="subheading">Richard Lucas</h3>
 
             <p>
               Curiosity has led me to discover the fascinating world of web
@@ -82,7 +83,7 @@
       </section>
 
       <section id="work">
-        <h1 class="section-heading">What I've done</h1>
+        <h2 class="section-heading">What I've done</h2>
         <div
           id="carouselExampleControls"
           class="carousel slide"
@@ -98,7 +99,7 @@
                 "
                 sizes="(min-width: 875px) 3500px"
                 class="d-block w-100"
-                alt="Buildings"
+                alt="Office Buildings"
               />
               <div class="carousel-caption alignment">
                 <h5>My journey so far...</h5>
@@ -201,7 +202,7 @@
       </section>
 
       <section id="education">
-        <h1 class="section-heading">What I Know</h1>
+        <h2 class="section-heading">What I Know</h2>
         <div class="flex-education">
           <div class="flex-education-digital">
             <h4 class="subheading">Digital skills</h4>
@@ -309,40 +310,38 @@
       </section>
 
       <section id="projects">
-        <h1 class="section-heading">My projects</h1>
+        <h2 class="section-heading">My projects</h2>
         <ul class="group-btns" aria-label="Projects Accordion">
-          <div class="flex-center-col">
-            <li>
-              <button
-                id="project-1"
-                aria-expanded="false"
-                aria-controls="project-1-content"
-              >
-                PROJECT ONE
-              </button>
-              <div
-                id="project-1-content"
-                role="region"
-                aria-labelledby="project-1"
-              >
-                <h5>Project Description</h5>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-                  delectus quo iste possimus magnam aliquam beatae doloremque
-                  molestiae laboriosam vero corrupti ducimus neque dolor sunt
-                  nam illo et veritatis? Veniam?
-                </p>
-                <a href="/projects/projects.html" target="_blank"
-                  >View Project</a
-                >
-              </div>
-            </li>
-          </div>
-          <div class="flex-left-right-col">
-            <div class="flex-left-col">
+          <li class="flex-center-col">
+            <button
+              id="project-1"
+              type="button"
+              aria-expanded="false"
+              aria-controls="project-1-content"
+            >
+              PROJECT ONE
+            </button>
+            <div
+              id="project-1-content"
+              role="region"
+              aria-labelledby="project-1"
+            >
+              <h5>Project Description</h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+                delectus quo iste possimus magnam aliquam beatae doloremque
+                molestiae laboriosam vero corrupti ducimus neque dolor sunt nam
+                illo et veritatis? Veniam?
+              </p>
+              <a href="/projects/projects.html" target="_blank">View Project</a>
+            </div>
+          </li>
+          <li class="flex-left-right-col">
+            <ul class="flex-left-col">
               <li>
                 <button
                   id="project-2"
+                  type="button"
                   aria-expanded="false"
                   aria-controls="project-2-content"
                 >
@@ -369,6 +368,7 @@
               <li>
                 <button
                   id="project-3"
+                  type="button"
                   aria-expanded="false"
                   aria-controls="project-3-content"
                 >
@@ -391,11 +391,12 @@
                   >
                 </div>
               </li>
-            </div>
-            <div class="flex-right-col">
+            </ul>
+            <ul class="flex-right-col">
               <li>
                 <button
                   id="project-4"
+                  type="button"
                   aria-expanded="false"
                   aria-controls="project-4-content"
                 >
@@ -421,6 +422,7 @@
               <li>
                 <button
                   id="project-5"
+                  type="button"
                   aria-expanded="false"
                   aria-controls="project-5-content"
                 >
@@ -443,8 +445,8 @@
                   >
                 </div>
               </li>
-            </div>
-          </div>
+            </ul>
+          </li>
         </ul>
       </section>
 

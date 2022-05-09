@@ -356,19 +356,22 @@ footer a:hover {
   padding-left: 36px;
 }
 
-#projects .group-btns {
+#projects ul {
   list-style-type: none;
   padding-left: 0;
+}
+
+#projects .group-btns {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#projects .group-btns div li {
+#projects .group-btns li {
   text-align: center;
 }
 
-#projects .group-btns div li div {
+#projects .group-btns li div {
   margin-top: 0.2em;
   max-height: 0;
   overflow: hidden;
@@ -447,14 +450,14 @@ footer a:hover {
   nav .main-menu li {
     margin-right: 13px;
   }
-  #work .alignment * {
-    font-size: 1.2rem;
-  }
   #about-me .flex-about-me {
     flex-direction: row;
   }
-  #about-me .flex-about-me h2 {
+  #about-me .flex-about-me h3 {
     align-self: flex-start;
+  }
+  #work .alignment * {
+    font-size: 1.2rem;
   }
   .flex-education {
     display: flex;
