@@ -6,7 +6,7 @@ nav {
   background-color: rgb(0, 0, 0);
   height: 3.5em;
 
-  ul {
+  .main-menu {
     display: flex;
     flex-direction: column;
     list-style-type: none;
@@ -16,9 +16,14 @@ nav {
     border-bottom: 1.5px solid $color-green;
     margin-bottom: 0px;
 
+    ul {
+      list-style-type: none;
+      padding: 0px;
+    }
+
     .logo a {
       color: $color-green !important;
-      font-size: 1.3em;
+      font-size: 1.8em;
     }
 
     .logo-toggle {
@@ -30,7 +35,7 @@ nav {
       background-color: black;
       color: white;
       border: none;
-      font-size: 1.3em;
+      font-size: 1.8em;
       padding: 1px 1px;
 
       transition: transform 1s ease;
@@ -54,20 +59,32 @@ nav {
       display: none;
     }
 
-    li {
+    a {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: white;
+      }
+
+      &:hover {
+        color: $color-green;
+      }
+    }
+
+    .page-links li {
       font-size: 1.5em;
 
-      a {
-        &:link,
-        &:visited {
-          text-decoration: none;
-          color: white;
-        }
+      // a {
+      //   &:link,
+      //   &:visited {
+      //     text-decoration: none;
+      //     color: white;
+      //   }
 
-        &:hover {
-          color: $color-green;
-        }
-      }
+      //   &:hover {
+      //     color: $color-green;
+      //   }
+      // }
     }
   }
 }

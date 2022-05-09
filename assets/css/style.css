@@ -95,7 +95,7 @@ nav {
   height: 3.5em;
 }
 
-nav ul {
+nav .main-menu {
   display: flex;
   flex-direction: column;
   list-style-type: none;
@@ -106,54 +106,59 @@ nav ul {
   margin-bottom: 0px;
 }
 
-nav ul .logo a {
-  color: #00ff2a !important;
-  font-size: 1.3em;
+nav .main-menu ul {
+  list-style-type: none;
+  padding: 0px;
 }
 
-nav ul .logo-toggle {
+nav .main-menu .logo a {
+  color: #00ff2a !important;
+  font-size: 1.8em;
+}
+
+nav .main-menu .logo-toggle {
   display: flex;
   justify-content: space-between;
 }
 
-nav ul button {
+nav .main-menu button {
   background-color: black;
   color: white;
   border: none;
-  font-size: 1.3em;
+  font-size: 1.8em;
   padding: 1px 1px;
   transition: transform 1s ease;
 }
 
-nav ul button:hover {
+nav .main-menu button:hover {
   color: #00ff2a;
 }
 
-nav ul .btn-rotate {
+nav .main-menu .btn-rotate {
   transform: rotate(180deg);
 }
 
-nav ul .page-links {
+nav .main-menu .page-links {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-nav ul .show-hide {
+nav .main-menu .show-hide {
   display: none;
 }
 
-nav ul li {
-  font-size: 1.5em;
-}
-
-nav ul li a:link, nav ul li a:visited {
+nav .main-menu a:link, nav .main-menu a:visited {
   text-decoration: none;
   color: white;
 }
 
-nav ul li a:hover {
+nav .main-menu a:hover {
   color: #00ff2a;
+}
+
+nav .main-menu .page-links li {
+  font-size: 1.5em;
 }
 
 #about-me .flex-about-me {
@@ -429,17 +434,17 @@ footer a:hover {
 }
 
 @media only screen and (min-width: 670px) {
-  nav ul {
+  nav .main-menu {
     flex-direction: row;
     justify-content: space-between;
   }
-  nav ul .page-links {
+  nav .main-menu .page-links {
     flex-direction: row;
   }
-  nav ul .btn-toggle {
+  nav .main-menu .btn-toggle {
     display: none;
   }
-  nav ul li {
+  nav .main-menu li {
     margin-right: 13px;
   }
   #work .alignment * {
