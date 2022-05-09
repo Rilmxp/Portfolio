@@ -161,6 +161,10 @@ nav .main-menu .page-links li {
   font-size: 1.5em;
 }
 
+nav .main-menu .page-links li:last-child {
+  margin-right: 0px;
+}
+
 #about-me .flex-about-me {
   display: flex;
   flex-direction: column;
@@ -440,6 +444,8 @@ footer a:hover {
   nav .main-menu {
     flex-direction: row;
     justify-content: space-between;
+    padding-right: 0px;
+    align-items: center;
   }
   nav .main-menu .page-links {
     flex-direction: row;

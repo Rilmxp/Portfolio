@@ -74,17 +74,9 @@ nav {
     .page-links li {
       font-size: 1.5em;
 
-      // a {
-      //   &:link,
-      //   &:visited {
-      //     text-decoration: none;
-      //     color: white;
-      //   }
-
-      //   &:hover {
-      //     color: $color-green;
-      //   }
-      // }
+      &:last-child {
+        margin-right: 0px;
+      }
     }
   }
 }
