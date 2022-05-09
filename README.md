@@ -26,7 +26,7 @@ I have tried as much as possible to respect ARIA standards which I hope I have s
    - Font-Awesome:
      - Used for social media icons, bullet poinst (graduation hat),  under education/formal education section, and nav. bar toggle button.
    
-   - Bootstrap v.5.1.3 - Carousel only.  
+   - Bootstrap v.5.1.3 - Carousel and progress bar only.
    
    - Unsplash (carousel images) - https://unsplash.com/ - No attribution needed
    
