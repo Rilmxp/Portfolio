@@ -8,7 +8,7 @@ There is also a 2nd html doc (projects.html), to where you are redirected when y
 
 I have tried as much as possible to respect ARIA standards which I hope I have succeeded with. I have however left the article without a header for stetic reasons. This is the only HTML validation warning the document gets.
 
-## Tecnologies / libraries / external resources
+## Technologies / libraries / external resources
 
   - HTML.
 
