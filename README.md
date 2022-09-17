@@ -18,7 +18,7 @@ I have tried as much as possible to respect ARIA standards which I hope I have s
     - Notes on the above functions can be found directly on the code itself on main.js.
   
   - CSS/SASS: 
-    - SASS modules are organized by section (navbar, education, etc) or scope (media queries, config).
+    - SASS partials are organized by section (navbar, education, etc) or scope (media queries, config).
     - CSS animations made with transition and transform properties performed on either an ::after or ::before pseudo-element: 
         - Green underline on hover for the main 4 section headings.
         - View project anchor under each accordion button in the My Projects section
