@@ -4,21 +4,18 @@
   font-style: normal;
   font-weight: 400;
 }
-
 @font-face {
   font-family: "Source Sans Pro";
   src: url("../fonts/SourceSansPro-Bold.otf.woff") format("woff");
   font-style: normal;
   font-weight: 700;
 }
-
 @font-face {
   font-family: "Source Sans Pro";
   src: url("../fonts/SourceSansPro-Black.otf.woff") format("woff");
   font-style: normal;
   font-weight: 900;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -30,13 +27,8 @@ body {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  color: white;
-  background-color: white;
+  background-color: #f2f2f2;
   line-height: normal;
-}
-
-article {
-  background-color: black;
 }
 
 section {
@@ -49,28 +41,26 @@ section {
   width: max-content;
   margin: 0 auto 1em auto;
   font-weight: 900;
-  color: #fef200;
+  color: #c00c30;
   font-size: 2em;
   position: relative;
   /* space navbar/heading when scrolled from navbar menu */
   padding-top: 70px;
   /* Sections' headings' underline hover effects */
 }
-
 .section-heading::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: -5px;
   height: 3px;
-  background-color: #00ff2a;
+  background-color: rgba(0, 47, 135, 0.9);
   width: 100%;
   border-radius: 15px;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 600ms ease;
 }
-
 .section-heading:hover::after {
   transform: scaleX(1);
   transform-origin: left;
@@ -80,9 +70,8 @@ section {
   margin-bottom: 0.8em;
   margin-top: 0.8em;
   font-weight: 900;
-  color: #fef200;
+  color: rgba(0, 47, 135, 0.9);
   width: max-content;
-  border-bottom: 2px solid red;
   font-size: 1.5em;
 }
 
@@ -91,76 +80,62 @@ nav {
   z-index: 2;
   width: 100%;
   max-width: 1400px;
-  background-color: black;
   height: 3.5em;
 }
-
 nav .main-menu {
   display: flex;
   flex-direction: column;
   list-style-type: none;
   padding: 10px;
   font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.9);
-  border-bottom: 1.5px solid #00ff2a;
+  background-color: rgba(0, 47, 135, 0.9);
   margin-bottom: 0px;
 }
-
 nav .main-menu ul {
   list-style-type: none;
   padding: 0px;
 }
-
 nav .main-menu .logo a {
-  color: #00ff2a !important;
   font-size: 1.8em;
 }
-
 nav .main-menu .logo-toggle {
   display: flex;
   justify-content: space-between;
 }
-
 nav .main-menu button {
-  background-color: black;
+  background-color: rgba(0, 47, 135, 0);
   color: white;
+  opacity: 0.5;
   border: none;
   font-size: 1.8em;
   padding: 1px 1px;
   transition: transform 1s ease;
 }
-
 nav .main-menu button:hover {
-  color: #00ff2a;
+  opacity: 1;
 }
-
 nav .main-menu .btn-rotate {
   transform: rotate(180deg);
 }
-
 nav .main-menu .page-links {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 nav .main-menu .show-hide {
   display: none;
 }
-
 nav .main-menu a:link, nav .main-menu a:visited {
   text-decoration: none;
   color: white;
+  opacity: 0.5;
 }
-
 nav .main-menu a:hover {
-  color: #00ff2a;
+  opacity: 1;
 }
-
 nav .main-menu .page-links li {
   font-size: 1.5em;
 }
-
 nav .main-menu .page-links li:last-child {
   margin-right: 0px;
 }
@@ -170,13 +145,9 @@ nav .main-menu .page-links li:last-child {
   flex-direction: column;
   align-items: center;
 }
-
 #about-me .flex-about-me img {
   border-radius: 50%;
-  filter: grayscale(85%);
-  border: 2px solid;
 }
-
 #about-me .flex-about-me .inner-about-me {
   display: flex;
   flex-direction: column;
@@ -192,22 +163,18 @@ nav .main-menu .page-links li:last-child {
   margin-left: 0px;
   margin-right: 0px;
 }
-
 #work .carousel-item {
-  max-height: 75vh;
+  max-height: 70vh;
 }
-
 #work img {
   min-height: 296px;
   opacity: 0.5;
 }
-
 #work ul {
   list-style-type: none;
   font-size: smaller;
   padding-left: 0;
 }
-
 #work .alignment {
   display: flex;
   flex-direction: column;
@@ -221,64 +188,55 @@ nav .main-menu .page-links li:last-child {
   width: 75%;
   /* hide slide content under 320px */
 }
-
 @media (max-width: 319px) {
   #work .alignment {
     display: none;
   }
 }
-
 #work h5,
 #work h6,
 #work p {
-  text-shadow: -1.2px 0 black, 0 1.2px black, 1.2px 0 black, 0 -1.2px black;
+  color: rgb(0, 47, 135);
 }
-
 #work h5 {
   font-weight: bold;
-  color: #fef200;
 }
-
 #work h6 {
   font-size: 19.2px;
   font-weight: bold;
   margin-bottom: -3px;
 }
-
 #work p {
   font-size: 16px;
 }
-
 #work .job-description {
   margin-top: -1.2em;
 }
 
 footer {
-  background-color: #001233;
+  color: white;
+  background-color: rgba(0, 47, 135, 0.9);
   padding-bottom: 1em;
   margin-top: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 footer h5 {
-  color: #fef200;
+  opacity: 0.5;
   font-weight: bold;
   padding-top: 15px;
 }
-
 footer i {
   font-size: 2em;
   margin: 0 10px;
 }
-
 footer a:visited, footer a:link {
-  color: white;
+  color: #c00c30;
+  opacity: 1;
 }
-
 footer a:hover {
-  color: #00ff2a;
+  color: white;
 }
 
 #education {
@@ -286,39 +244,28 @@ footer a:hover {
   /* languages subsection */
   /* Formal education subsection */
 }
-
 #education .digital-skills li {
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 1em;
 }
-
 #education .progress,
 #education .progress-bar {
   border-radius: 0px 15px 15px 0px;
 }
-
 #education .progress {
   height: 1.5em;
 }
-
 #education .progress-bar {
-  background: linear-gradient(to right, #fef200, #00ff2a);
+  background: linear-gradient(to right, #c00c30, rgba(0, 47, 135, 0.9));
   opacity: 0.8;
 }
-
 #education table {
   width: 100%;
 }
-
 #education table tr:first-child {
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid white;
 }
-
-#education table tr:hover {
-  background-color: #001233;
-}
-
 #education table th,
 #education table td {
   height: 60px;
@@ -326,36 +273,30 @@ footer a:hover {
   text-align: center;
   vertical-align: middle;
 }
-
 #education table img {
   max-width: 50px;
   margin: 0 auto;
 }
-
 #education h3 {
   font-weight: bold;
   margin-bottom: 0;
   font-size: 1.3rem;
 }
-
 #education h3 + p {
   font-size: smaller;
   font-weight: bold;
 }
-
 #education ul {
   list-style-type: none;
   padding-left: 0;
   /* bullet point graduation icon */
 }
-
 #education ul h3::before {
   content: "\f19d";
   font-family: "Font Awesome 5 Free";
   padding-right: 10px;
-  color: #00ff2a;
+  color: #c00c30;
 }
-
 #education ul p {
   padding-left: 36px;
 }
@@ -364,49 +305,42 @@ footer a:hover {
   list-style-type: none;
   padding-left: 0;
 }
-
 #projects .group-btns {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 #projects .group-btns li {
   text-align: center;
 }
-
 #projects .group-btns li div {
   margin-top: 0.2em;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s;
 }
-
 #projects h5 {
   font-weight: bold;
 }
-
 #projects button {
   font-weight: bold;
   padding: 0.3em;
   border-radius: 35px;
   width: 75%;
-  border: 3px solid #fef200;
-  color: white;
-  background: black;
+  border: 3px solid rgba(0, 47, 135, 0.9);
+  color: black;
+  background: white;
   margin-top: 1em;
 }
-
 #projects .active,
 #projects button:hover {
-  background-color: #001233;
-  color: #00ff2a;
+  background-color: rgba(0, 47, 135, 0.9);
+  color: white;
 }
-
 #projects a {
   position: relative;
   font-weight: bold;
-  border: 2px solid white;
+  border: 2px solid rgba(0, 47, 135, 0.9);
   border-radius: 35px;
   padding: 5px;
   display: block;
@@ -415,27 +349,24 @@ footer a:hover {
   margin: 10px auto;
   /* view project/go animation */
 }
-
 #projects a:link, #projects a:visited {
   text-decoration: none;
-  color: white;
+  color: black;
 }
-
 #projects a::before {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: #001233;
+  background-color: rgb(0, 47, 135);
   border-radius: 35px;
   content: "GO";
   padding-top: 4px;
-  color: #00ff2a;
+  color: white;
   transform: scaleX(0);
   transition: transform 400ms ease-in;
 }
-
 #projects a:hover::before {
   transform: scaleX(1);
 }
@@ -475,7 +406,7 @@ footer a:hover {
     margin-right: auto;
   }
   .flex-education .flex-education-digital,
-  .flex-education .flex-education-languages {
+.flex-education .flex-education-languages {
     width: 45%;
   }
   .flex-education .flex-education-digital {

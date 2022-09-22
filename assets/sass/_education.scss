@@ -16,7 +16,7 @@
   }
 
   .progress-bar {
-    background: linear-gradient(to right, $color-yellow, $color-green);
+    background: linear-gradient(to right, $color-red, $color-blue);
     opacity: 0.8;
   }
 
@@ -25,12 +25,13 @@
     width: 100%;
 
     tr:first-child {
-      border-bottom: 1px solid white;
+      border-bottom: 2px solid white;
     }
 
-    tr:hover {
-      background-color: $color-blue;
-    }
+    // tr:hover {
+    //   // background-color: $color-blue;
+    //   background-color: rgba(242, 242, 242, 1);
+    // }
 
     th,
     td {
@@ -67,7 +68,7 @@
       content: "\f19d";
       font-family: "Font Awesome 5 Free";
       padding-right: 10px;
-      color: $color-green;
+      color: $color-red;
     }
 
     p {

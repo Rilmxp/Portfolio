@@ -3,7 +3,9 @@ nav {
   z-index: 2;
   width: 100%;
   max-width: 1400px;
-  background-color: rgb(0, 0, 0);
+  // background-color: rgb(0, 0, 0);
+  // background-color: $color-blue;
+
   height: 3.5em;
 
   .main-menu {
@@ -12,8 +14,8 @@ nav {
     list-style-type: none;
     padding: 10px;
     font-weight: bold;
-    background-color: rgba(0, 0, 0, 0.9);
-    border-bottom: 1.5px solid $color-green;
+    background-color: rgba(0, 47, 135, 0.9);
+    // border-bottom: 1.5px solid $color-green;
     margin-bottom: 0px;
 
     ul {
@@ -22,8 +24,9 @@ nav {
     }
 
     .logo a {
-      color: $color-green !important;
+      // color: $color-green !important;
       font-size: 1.8em;
+      // background-color: $color-red;
     }
 
     .logo-toggle {
@@ -32,8 +35,10 @@ nav {
     }
 
     button {
-      background-color: black;
+      // background-color: black;
+      background-color: rgba(0, 47, 135, 0);
       color: white;
+      opacity: 0.5;
       border: none;
       font-size: 1.8em;
       padding: 1px 1px;
@@ -41,7 +46,8 @@ nav {
       transition: transform 1s ease;
 
       &:hover {
-        color: $color-green;
+        // color: $color-green;
+        opacity: 1;
       }
     }
 
@@ -64,10 +70,11 @@ nav {
       &:visited {
         text-decoration: none;
         color: white;
+        opacity: 0.5;
       }
 
       &:hover {
-        color: $color-green;
+        opacity: 1;
       }
     }
 
