@@ -59,7 +59,7 @@ mediaObj.onchange = (e) => {
   }
 };
 
-//////////////////////////////////////////////////////////////////////////7
+//////////////////////////////////////////////////////////////////////////
 
 //////////////////////////
 // ACCORDION (PROJECTS) //
@@ -97,7 +97,7 @@ for (let i = 0; i < btnAccordion.length; i++) {
         } else {
           accordionContent.forEach((item) => (item.style.maxHeight = null));
           accordionContent[y].style.maxHeight =
-            accordionContent[y].scrollHeight + "px";
+            accordionContent[y].scrollHeight * 2 + "px";
         }
       }
     }

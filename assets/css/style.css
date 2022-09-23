@@ -25,7 +25,6 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
   width: 100%;
-  max-width: 1400px;
   margin: 0 auto;
   background-color: #f2f2f2;
   line-height: normal;
@@ -79,7 +78,6 @@ nav {
   position: fixed;
   z-index: 2;
   width: 100%;
-  max-width: 1400px;
   height: 3.5em;
 }
 nav .main-menu {
@@ -147,6 +145,9 @@ nav .main-menu .page-links li:last-child {
 }
 #about-me .flex-about-me img {
   border-radius: 50%;
+  max-width: 250px;
+  width: 100%;
+  height: auto;
 }
 #about-me .flex-about-me .inner-about-me {
   display: flex;
@@ -214,8 +215,7 @@ nav .main-menu .page-links li:last-child {
 }
 
 footer {
-  color: white;
-  background-color: rgba(0, 47, 135, 0.9);
+  background-color: white;
   padding-bottom: 1em;
   margin-top: 2em;
   display: flex;
@@ -223,7 +223,7 @@ footer {
   align-items: center;
 }
 footer h5 {
-  opacity: 0.5;
+  color: #c00c30;
   font-weight: bold;
   padding-top: 15px;
 }
@@ -231,12 +231,8 @@ footer i {
   font-size: 2em;
   margin: 0 10px;
 }
-footer a:visited, footer a:link {
-  color: #c00c30;
-  opacity: 1;
-}
 footer a:hover {
-  color: white;
+  color: rgba(0, 47, 135, 0.9);
 }
 
 #education {
@@ -265,6 +261,9 @@ footer a:hover {
 }
 #education table tr:first-child {
   border-bottom: 2px solid white;
+}
+#education table tr:hover {
+  background-color: white;
 }
 #education table th,
 #education table td {
@@ -309,9 +308,11 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 #projects .group-btns li {
   text-align: center;
+  width: 100%;
 }
 #projects .group-btns li div {
   margin-top: 0.2em;
@@ -329,13 +330,13 @@ footer a:hover {
   width: 75%;
   border: 3px solid rgba(0, 47, 135, 0.9);
   color: black;
-  background: white;
+  background-color: #f2f2f2;
   margin-top: 1em;
 }
 #projects .active,
 #projects button:hover {
-  background-color: rgba(0, 47, 135, 0.9);
-  color: white;
+  color: rgba(0, 47, 135, 0.9);
+  background-color: white;
 }
 #projects a {
   position: relative;
@@ -345,7 +346,7 @@ footer a:hover {
   padding: 5px;
   display: block;
   margin-bottom: 10px;
-  width: 42%;
+  width: 46%;
   margin: 10px auto;
   /* view project/go animation */
 }
@@ -359,13 +360,13 @@ footer a:hover {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(0, 47, 135);
+  background-color: white;
   border-radius: 35px;
   content: "GO";
   padding-top: 4px;
-  color: white;
+  color: rgba(0, 47, 135, 0.9);
   transform: scaleX(0);
-  transition: transform 400ms ease-in;
+  transition: transform 400ms ease-in-out;
 }
 #projects a:hover::before {
   transform: scaleX(1);
@@ -389,6 +390,9 @@ footer a:hover {
   }
   #about-me .flex-about-me {
     flex-direction: row;
+  }
+  #about-me .flex-about-me img {
+    max-width: 350px;
   }
   #about-me .flex-about-me h3 {
     align-self: flex-start;
@@ -432,11 +436,11 @@ footer a:hover {
   #projects {
     /* button & <a> center col half the size to match the size of the other 2 columns below it*/
   }
-  #projects .flex-center-col button {
-    width: 37.5%;
+  #projects .flex-center-col {
+    width: 50% !important;
   }
   #projects .flex-center-col a {
-    width: 21%;
+    width: 40%;
   }
   #projects .flex-left-right-col {
     display: flex;

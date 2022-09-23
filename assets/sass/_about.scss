@@ -6,6 +6,10 @@
 
     img {
       border-radius: 50%;
+      max-width: 250px;
+
+      width: 100%;
+      height: auto;
       // filter: grayscale(85%);
       // border: 1.5px solid $color-blue;
     }

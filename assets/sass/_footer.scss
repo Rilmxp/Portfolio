@@ -1,7 +1,9 @@
 footer {
-  color: white;
+  // color: white;
   // opacity: 0.5;
-  background-color: $color-blue;
+  // background-color: $color-blue;
+  // color: $color-blue;
+  background-color: white;
   padding-bottom: 1em;
   margin-top: 2em;
 
@@ -10,9 +12,9 @@ footer {
   align-items: center;
 
   h5 {
-    // color: $color-red;
+    color: $color-red;
     // color: white;
-    opacity: 0.5;
+    // opacity: 0.5;
 
     font-weight: bold;
     padding-top: 15px;
@@ -27,13 +29,13 @@ footer {
     &:visited,
     &:link {
       // color: white;
-      color: $color-red;
-      opacity: 1;
+      // color: $color-blue;
+      // opacity: 1;
     }
     &:hover {
       // color: $color-green;
-      // color: $color-red;
-      color: white;
+      color: $color-blue;
+      // color: white;
       // opacity: 1;
     }
   }

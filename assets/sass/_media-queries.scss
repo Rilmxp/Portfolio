@@ -26,6 +26,10 @@
     .flex-about-me {
       flex-direction: row;
 
+      img {
+        max-width: 350px;
+      }
+
       h3 {
         align-self: flex-start;
       }
@@ -81,11 +85,14 @@
   #projects {
     /* button & <a> center col half the size to match the size of the other 2 columns below it*/
     .flex-center-col {
+      width: 50% !important;
+
       button {
-        width: 37.5%;
+        // width: 37.5%;
+        // width: 75%;
       }
       a {
-        width: 21%;
+        width: 40%;
       }
     }
 
