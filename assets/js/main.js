@@ -5,36 +5,30 @@
 const toggleBtn = document.querySelector(".btn-toggle button");
 const toggleIcon = document.querySelector(".btn-toggle button i");
 const navListItems = document.querySelectorAll(".page-links li a ");
+const menuList = document.querySelector("#menu");
 
 let openMenu = false;
 
-// Toggle button navbar menu (hamburger - cross)
+// display menu when clicking on toggle Button
 toggleBtn.addEventListener("click", function () {
-  navListItems.forEach((item) => item.classList.toggle("show-hide"));
-  if (!openMenu) {
-    toggleIcon.classList = "fa-solid fa-xmark";
-    openMenu = true;
-    toggleBtn.setAttribute("aria-expanded", "true");
-    toggleBtn.classList.toggle("btn-rotate");
-  } else {
-    toggleIcon.classList = "fa-solid fa-bars";
-    openMenu = false;
-    toggleBtn.setAttribute("aria-expanded", "false");
-    toggleBtn.classList.toggle("btn-rotate");
-  }
+  displayMenu(navListItems);
 });
 
 // close menu when click on list item
-for (let i = 0; i < navListItems.length; i++) {
-  navListItems[i].addEventListener("click", function () {
-    if (openMenu) {
-      navListItems.forEach((item) => item.classList.toggle("show-hide"));
-      toggleIcon.classList = "fa-solid fa-bars";
-      openMenu = false;
-      toggleBtn.setAttribute("aria-expanded", "false");
+menuList.addEventListener("click", function (event) {
+  if (openMenu === true) {
+    if (event.target.tagName !== "UL" && event.target.closest("LI")) {
+      displayMenu(navListItems);
     }
-  });
-}
+  }
+});
+
+// close menu when click outside of it.
+window.addEventListener("click", function (event) {
+  if (openMenu === true && !event.target.closest(".main-menu")) {
+    displayMenu(navListItems);
+  }
+});
 
 // Show navbar items when init on wide screen
 const mediaObj = window.matchMedia("(min-width: 670px)");
@@ -42,22 +36,39 @@ const mediaObj = window.matchMedia("(min-width: 670px)");
 if (mediaObj.matches) {
   navListItems.forEach((item) => item.classList.remove("show-hide"));
   toggleBtn.setAttribute("aria-expanded", "true");
+  openMenu = false;
 }
 
-// show/hide navbar items upon media query change.
 mediaObj.onchange = (e) => {
-  if (e.matches) {
-    if (navListItems[0].classList.contains("show-hide")) {
-      navListItems.forEach((item) => item.classList.remove("show-hide"));
-      toggleBtn.setAttribute("aria-expanded", "true");
-    }
-  } else {
+  // media < 670px
+  if (!e.matches) {
     navListItems.forEach((item) => item.classList.add("show-hide"));
-    openMenu = false;
     toggleIcon.classList = "fa-solid fa-bars";
     toggleBtn.setAttribute("aria-expanded", "false");
+  } else {
+    navListItems.forEach((item) => item.classList.remove("show-hide"));
+    toggleBtn.setAttribute("aria-expanded", "true");
+    openMenu = false;
   }
 };
+
+// FUNCTION Open / close navbar menu. //
+function displayMenu(menuItems) {
+  menuItems.forEach((item) => item.classList.add("show-hide"));
+  if (openMenu === true) {
+    toggleIcon.classList = "fa-solid fa-bars";
+    openMenu = false;
+    toggleBtn.setAttribute("aria-expanded", "false");
+    toggleBtn.classList.toggle("btn-rotate");
+    // menuItems.forEach((item) => item.classList.("show-hide"));
+  } else {
+    toggleIcon.classList = "fa-solid fa-xmark";
+    openMenu = true;
+    toggleBtn.setAttribute("aria-expanded", "true");
+    toggleBtn.classList.toggle("btn-rotate");
+    menuItems.forEach((item) => item.classList.remove("show-hide"));
+  }
+}
 
 //////////////////////////////////////////////////////////////////////////
 
@@ -104,4 +115,4 @@ for (let i = 0; i < btnAccordion.length; i++) {
   });
 }
 
-/////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
