@@ -1,8 +1,4 @@
 footer {
-  // color: white;
-  // opacity: 0.5;
-  // background-color: $color-blue;
-  // color: $color-blue;
   background-color: white;
   padding-bottom: 1em;
   margin-top: 2em;
@@ -13,8 +9,6 @@ footer {
 
   h5 {
     color: $color-red;
-    // color: white;
-    // opacity: 0.5;
 
     font-weight: bold;
     padding-top: 15px;
@@ -22,21 +16,11 @@ footer {
   i {
     font-size: 2em;
     margin: 0 10px;
-    // opacity: 0.5;
   }
 
   a {
-    &:visited,
-    &:link {
-      // color: white;
-      // color: $color-blue;
-      // opacity: 1;
-    }
     &:hover {
-      // color: $color-green;
       color: $color-blue;
-      // color: white;
-      // opacity: 1;
     }
   }
 }

@@ -12,7 +12,6 @@
 
   img {
     min-height: 296px;
-    // opacity: 0.5;
     opacity: 0.5;
   }
 
@@ -33,20 +32,12 @@
     bottom: 0;
     transform: translate(-50%, -50%);
     width: 75%;
-
-    /* hide slide content under 320px */
-    @media (max-width: 319px) {
-      display: none;
-    }
   }
 
   h5,
   h6,
   p {
-    // text-shadow: -1.2px 0 black, 0 1.2px black, 1.2px 0 black, 0 -1.2px black;
-
     color: rgba(0, 47, 135);
-    // color: black;
   }
 
   h5 {
@@ -65,5 +56,9 @@
 
   .job-description {
     margin-top: -1.2em;
+  }
+
+  .turn-device-msg {
+    display: none;
   }
 }

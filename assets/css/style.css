@@ -187,12 +187,6 @@ nav .main-menu .page-links li:last-child {
   bottom: 0;
   transform: translate(-50%, -50%);
   width: 75%;
-  /* hide slide content under 320px */
-}
-@media (max-width: 319px) {
-  #work .alignment {
-    display: none;
-  }
 }
 #work h5,
 #work h6,
@@ -212,6 +206,9 @@ nav .main-menu .page-links li:last-child {
 }
 #work .job-description {
   margin-top: -1.2em;
+}
+#work .turn-device-msg {
+  display: none;
 }
 
 footer {
@@ -316,9 +313,9 @@ footer a:hover {
 }
 #projects .group-btns li div {
   margin-top: 0.2em;
-  max-height: 0;
+  max-height: 0px;
   overflow: hidden;
-  transition: max-height 0.5s;
+  transition: max-height 0.4s;
 }
 #projects h5 {
   font-weight: bold;
@@ -372,6 +369,24 @@ footer a:hover {
   transform: scaleX(1);
 }
 
+@media only screen and (max-width: 319px) {
+  #work {
+    /* hide slide content under 320px */
+    /* show turn page msg on slide*/
+  }
+  #work .alignment {
+    display: none;
+  }
+  #work .turn-device-msg {
+    color: rgba(0, 47, 135, 0.9);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
 @media only screen and (min-width: 670px) {
   nav .main-menu {
     flex-direction: row;

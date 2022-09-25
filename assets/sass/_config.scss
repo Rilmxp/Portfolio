@@ -28,16 +28,10 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
   width: 100%;
-  // max-width: 2000px;
   margin: 0 auto;
-  // color: white;
   background-color: #f2f2f2;
   line-height: normal;
 }
-
-// article {
-//   background-color: black;
-// }
 
 section {
   margin-left: 0.5em;
@@ -92,6 +86,5 @@ $color-blue: rgba(0, 47, 135, 0.9);
   font-weight: 900;
   color: $color-blue;
   width: max-content;
-  // border-bottom: 2px solid red;
   font-size: 1.5em;
 }

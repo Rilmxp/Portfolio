@@ -39,13 +39,16 @@ if (mediaObj.matches) {
   openMenu = false;
 }
 
+// show/hide navbar items on media change
 mediaObj.onchange = (e) => {
   // media < 670px
   if (!e.matches) {
     navListItems.forEach((item) => item.classList.add("show-hide"));
     toggleIcon.classList = "fa-solid fa-bars";
     toggleBtn.setAttribute("aria-expanded", "false");
-  } else {
+  }
+  // media > 670px
+  else {
     navListItems.forEach((item) => item.classList.remove("show-hide"));
     toggleBtn.setAttribute("aria-expanded", "true");
     openMenu = false;
@@ -60,7 +63,6 @@ function displayMenu(menuItems) {
     openMenu = false;
     toggleBtn.setAttribute("aria-expanded", "false");
     toggleBtn.classList.toggle("btn-rotate");
-    // menuItems.forEach((item) => item.classList.("show-hide"));
   } else {
     toggleIcon.classList = "fa-solid fa-xmark";
     openMenu = true;
@@ -75,44 +77,34 @@ function displayMenu(menuItems) {
 //////////////////////////
 // ACCORDION (PROJECTS) //
 
+const btnsGroupAccordion = document.querySelector(".group-btns");
 const btnAccordion = document.querySelectorAll(".group-btns button");
-const accordionContent = document.querySelectorAll(".group-btns li div");
 
-// listener to buttons
+// listener for buttons
 
-// toggle .active
-for (let i = 0; i < btnAccordion.length; i++) {
-  btnAccordion[i].addEventListener("click", function () {
-    if (!this.classList.contains("active")) {
-      btnAccordion.forEach((item) => item.classList.remove("active"));
-      this.classList.toggle("active");
-      this.setAttribute("aria-expanded", "true");
-    } else {
-      this.classList.remove("active");
-      this.setAttribute("aria-expanded", "false");
-    }
+// toggle .active and show/hide accordion content
+btnsGroupAccordion.addEventListener("click", function (event) {
+  let target = event.target.closest("button");
+  if (!target) return;
+  let accordionContent = target.nextElementSibling;
 
-    // get index of clicked button to match to index of content
-    let btnIndex;
-    for (const [key, value] of Object.entries(btnAccordion)) {
-      if (value === this) {
-        btnIndex = Number(key);
-      }
-    }
+  // if target btn is already open, close it
+  if (target.classList.contains("active")) {
+    target.classList.remove("active");
+    target.setAttribute("aria-expanded", "false");
+    accordionContent.style.maxHeight = null;
+  }
+  // else reset all btns and open the targeted one
+  else {
+    btnAccordion.forEach((item) => {
+      item.classList.remove("active");
+      item.nextElementSibling.style.maxHeight = null;
+    });
 
-    // show/hide content
-    for (let y = 0; y < accordionContent.length; y++) {
-      if (y === btnIndex) {
-        if (accordionContent[y].style.maxHeight) {
-          accordionContent.forEach((item) => (item.style.maxHeight = null));
-        } else {
-          accordionContent.forEach((item) => (item.style.maxHeight = null));
-          accordionContent[y].style.maxHeight =
-            accordionContent[y].scrollHeight * 2 + "px";
-        }
-      }
-    }
-  });
-}
-
-////////////////////////////////////////////////////////////////////////
+    target.classList.add("active");
+    target.setAttribute("aria-expanded", "true");
+    console.log(accordionContent.maxHeight);
+    // scrollHeight * 2 to have enough room for content in case of media changes from wide to narrow.
+    accordionContent.style.maxHeight = accordionContent.scrollHeight * 2 + "px";
+  }
+});
