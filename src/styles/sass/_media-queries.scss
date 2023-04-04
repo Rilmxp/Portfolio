@@ -3,11 +3,11 @@
 // controls display of carousel content < 319px
 @media only screen and (max-width: 319px) {
   #work {
-    /* hide slide content under 320px */
+    // hide slide content under 320px //
     .alignment {
       display: none;
     }
-    /* show turn page msg on slide*/
+    // show turn page msg on slide*//
     .turn-device-msg {
       color: $color-blue;
       display: block;
@@ -103,7 +103,7 @@
   }
 
   #projects {
-    /* button & <a> center col half the size to match the size of the other 2 columns below it*/
+    // button & <a> center col half the size to match the size of the other 2 columns below it
     .flex-center-col {
       width: 50% !important;
 
@@ -120,12 +120,14 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      width: 50%;
     }
 
     .flex-right-col {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      width: 50%;
     }
   }
 }
