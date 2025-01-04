@@ -1,24 +1,56 @@
 #education {
   // Digital skills subsection
-  .digital-skills li {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 1em;
-    text-align: left;
+
+  .digital-skills {
+    margin-top: 2.5em;
+    margin-bottom: 0;
+
+    p {
+      color: $color-blue;
+      opacity: 0.9;
+      font-weight: 600;
+      font-size: 1rem;
+    }
   }
 
-  .progress,
-  .progress-bar {
-    border-radius: 0px 15px 15px 0px;
+  .icon {
+    font-size: 1.5rem; /* Adjust icon size */
+
+    i {
+      color: $color-red;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
-  .progress {
-    height: 1.5em;
+  .icon-microsoft {
+    .img-microsoft {
+      width: 3rem;
+      height: auto;
+      // margin-bottom: 1rem;
+      margin-top: 0;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    p {
+      margin-top: 15px;
+      // font-size: 1.5rem;
+    }
+
+    .aspnet-paragraph {
+      margin-top: 21px;
+    }
   }
 
-  .progress-bar {
-    background: linear-gradient(to right, $color-red, $color-blue);
-    opacity: 0.8;
+  .icon p {
+    margin-top: 20px;
   }
 
   // languages subsection

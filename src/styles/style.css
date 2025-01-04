@@ -171,6 +171,9 @@ nav .main-menu .page-links li:last-child {
   min-height: 296px;
   opacity: 0.5;
 }
+#work .path {
+  opacity: 0.3;
+}
 #work ul {
   list-style-type: none;
   font-size: smaller;
@@ -188,12 +191,14 @@ nav .main-menu .page-links li:last-child {
   transform: translate(-50%, -50%);
   width: 75%;
 }
+#work h4,
 #work h5,
 #work h6,
 #work p {
   color: rgb(0, 47, 135);
 }
-#work h5 {
+#work h5,
+#work h4 {
   font-weight: bold;
 }
 #work h6 {
@@ -235,22 +240,43 @@ footer a:hover {
   color: rgba(0, 47, 135, 0.9);
 }
 
-#education .digital-skills li {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 1em;
-  text-align: left;
+#education .digital-skills {
+  margin-top: 2.5em;
+  margin-bottom: 0;
 }
-#education .progress,
-#education .progress-bar {
-  border-radius: 0px 15px 15px 0px;
+#education .digital-skills p {
+  color: rgba(0, 47, 135, 0.9);
+  opacity: 0.9;
+  font-weight: 600;
+  font-size: 1rem;
 }
-#education .progress {
-  height: 1.5em;
+#education .icon {
+  font-size: 1.5rem; /* Adjust icon size */
 }
-#education .progress-bar {
-  background: linear-gradient(to right, #c00c30, rgba(0, 47, 135, 0.9));
+#education .icon i {
+  color: #c00c30;
   opacity: 0.8;
+}
+#education .icon i:hover {
+  opacity: 1;
+}
+#education .icon-microsoft .img-microsoft {
+  width: 3rem;
+  height: auto;
+  margin-top: 0;
+  opacity: 0.8;
+}
+#education .icon-microsoft .img-microsoft:hover {
+  opacity: 1;
+}
+#education .icon-microsoft p {
+  margin-top: 15px;
+}
+#education .icon-microsoft .aspnet-paragraph {
+  margin-top: 21px;
+}
+#education .icon p {
+  margin-top: 20px;
 }
 #education table {
   width: 100%;
